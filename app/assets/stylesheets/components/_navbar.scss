@@ -34,6 +34,14 @@
             }
         }
     }
+
+    &__ctas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        
+    }
     
     
     &__checkbox {
@@ -204,6 +212,10 @@
             list-style: none;
             text-align: center;
             z-index: -200;
+
+            @media only screen and (max-width: $bp-small) {   
+                transform: translate(0%, 0%); 
+            }
             
             
         }
@@ -271,6 +283,10 @@
             top: 25%; 
             left: 20%;
             overflow-y: hidden;
+
+            @media only screen and (max-width: $bp-small) {    
+                left: 0%; 
+            }
             
         }
 

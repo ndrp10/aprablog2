@@ -22,6 +22,11 @@
         flex-grow: 2;
         justify-items: center;
         display: flex;
+
+        @media only screen and (max-width: $bp-medium) {
+                    
+            margin-top: 2vh;     
+            }
     }
 
     &__logo {
@@ -160,12 +165,11 @@
         
         @media only screen and (max-width: $bp-medium) {
         
-           flex-wrap: nowrap;
+           display: none;
          }
-         @media only screen and (max-width: $bp-phone) {
+        // @media only screen and (max-width: $bp-phone) { //
         
-            flex-wrap: wrap;
-          }
+          //  flex-wrap: wrap; } //
        
 
 

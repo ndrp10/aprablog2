@@ -1,3 +1,10 @@
+ <% set_meta_tags title: 'Core Principles',
+                  description: 'a brief description of pillar principles underlying APRA activities',
+                 og: {
+                     title: 'Core Principles',
+                     description: 'a brief description of pillar principles underlying APRA activities',
+                     image: asset_path('neuralnetwork.jpg'),
+                } %>
 <%= render 'shared/blogbar' %>
 
 <div class="manifesto">
@@ -82,7 +89,28 @@
                 </p>
             </div>
         </div>
-
+          <div class="about__container--body-ctas">
+                <%= link_to "Become a member", "/getmembership", class: "btn btn-small btn-purple btn-text" %>
+                <%= link_to "Organization", "/organization", class: "btn btn-small btn-purple btn-text" %>
+            </div>
+                <h2 class="about__container--contacts-header text-center">Follow us on social media</h2>
+                <div class="about__container--contacts">
+                    <a href="https://www.facebook.com/Research.APRA/" target="_blank">
+                    <%= fa_icon "facebook-f", class: "about__container--contacts-icon fa-2x" %>
+                    </a>
+                    <a href="https://www.instagram.com/apra.research/" target="_blank">
+                        <%= fa_icon "instagram", class: "about__container--contacts-icon fa-2x" %>
+                    </a>
+                    <a href="https://www.linkedin.com/company/apraresearch/" target="_blank">
+                        <%= fa_icon "linkedin", class: "about__container--contacts-icon fa-2x" %>
+                    </a>
+                    <a href="https://twitter.com/APRA_bot" target="_blank">
+                        <%= fa_icon "twitter", class: "about__container--contacts-icon fa-2x" %>
+                    </a>
+                    <a href="mailto:Research.APRA@gmail.com">
+                        <%= fa_icon "envelope", class: "about__container--contacts-icon fa-2x fal" %>
+                    </a>
+        </div>
       
     </div>
 

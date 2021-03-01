@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/organization", to: "pages#organization"
   get "/myprofile", to: "pages#myprofile"
   get "/pianos", to: "pianos#index"
-  get "/getmembership", to: "pages#getmembership"
+  get "/joinus", to: "pages#getmembership"
   get "/blog", to: "articles#index"
   get "/membersarea", to: "articles#membersarea"
   match '/users/:id', to: 'users#show', via: 'get'

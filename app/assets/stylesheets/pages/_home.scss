@@ -7,10 +7,10 @@
 
 
     @media only screen and (max-width: $bp-medium) {             
-        grid-template-rows: 70vh 80vh 80vh 80vh 80vh 60vh;
+        grid-template-rows: 60vh 80vh 80vh 80vh 80vh auto;
     }
     @media only screen and (max-width: $bp-small) {        
-        grid-template-rows: 70vh repeat(4, 100vh) 47vh;
+        grid-template-rows: 70vh repeat(4, 100vh) auto;
         grid-template-columns: repeat(9, 1fr); 
     }
     
