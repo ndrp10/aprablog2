@@ -1,0 +1,147 @@
+.workwithus {
+
+    &__wrapper {
+        margin: 5vh auto;
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        align-content: space-around;
+    }
+    
+    &__heading {
+        align-self: center;
+        font-family: $font-primary;
+        font-size: 4rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 3.5rem;
+        }
+    }
+
+    &__department {
+
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        margin: 5vh auto;
+
+        &--label {
+            margin: 2vh auto;
+            font-size: 2.5rem;
+            font-family: $font-primary;
+            font-weight: 700;
+            letter-spacing: .3rem;
+
+        }
+
+        &--membersbox {
+            margin-top: 2vh;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            @media only screen and (max-width: $bp-small) {
+                flex-direction: column;
+                justify-content: space-around;
+            }
+        }
+
+        &--member {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &-pic {
+
+                    background-position: center;
+                    margin: 2vh auto;
+                    width: 20rem;
+                    height: 20rem;
+                    border-radius: 50%;
+                    background-size: cover;
+
+                &-1 {
+                    background-image: url('thor_kristiannson.jpg');   
+                }
+                &-2 {
+                    background-image: url('keenan_de_leuw.png');
+                }
+                &-3 { 
+
+                }
+                &-4 {
+                    background-image: url('annika_wirsching.jpg');   
+                }
+                &-5 {
+                    background-image: url('anouk_fieten.jpg');
+                }
+                &-6 {
+                    background-image: url('david_paloma.jpg');  
+                }
+                &-7 {
+                    background-image: url('marco_aqil.jpg');   
+                }
+                &-8 { 
+                    background-image: url('max_laansma.png'); 
+                }
+                &-9 {
+                    background-image: url('ivar_rambags.jpg');
+                }
+                &-10 {
+                    background-image: url('josi_marschall.png'); 
+                }
+                &-11 {
+                    
+                }
+            }
+
+            &-name {
+                margin-bottom: 1rem;
+                font-size: 1.8rem;
+                font-weight: 600;
+                font-family: $font-display;
+                text-align: center;
+
+            }
+
+            &-role {
+                font-weight: 100;
+                font-size: 1.4rem;
+                font-family: $font-primary;
+                text-align: center;
+            }
+
+        }
+
+        &--function {
+
+            display: flex;
+            flex-direction: column;
+            align-content: space-around;
+            margin-top: 4vh;
+
+            &--heading {
+                font-size: 2rem;
+            }
+
+            &--description {
+                padding: 1vh 10vw;
+                margin-top: 2vh;
+                font-size: 1.8rem;
+                font-weight: 300;
+            }
+
+            &--list {
+
+                padding: 1vh 12vw;
+                font-size: 1.8rem;
+                font-weight: 300;
+
+                &-item {
+
+                }
+            }
+        }  
+    }
+}

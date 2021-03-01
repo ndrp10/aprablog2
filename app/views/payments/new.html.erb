@@ -1,0 +1,38 @@
+<%= render 'shared/blogbar' %>
+
+<div class="payment__container">
+
+  <h1 class="text-center payment__heading">Checkout</h1>
+  
+    
+      <div class="payment__container--box">
+       
+       <div class="payment__container--box-logo"></div>
+        
+        <p class="payment__container--box-p text-center">Yearly Subscription to <br> APRA Foundation</strong></p>
+
+        <p class="payment__price"><%= @price %></p>
+        <button id="pay" class="payment__cta btn btn-small btn-purple">Purchase</button>
+        
+        <script src="https://js.stripe.com/v3/"></script>
+        <script>
+          const paymentButton = document.getElementById('pay');
+          paymentButton.addEventListener('click', () => {
+            const stripe = Stripe('<%= ENV['STRIPE_PUBLISHABLE_KEY'] %>');
+            stripe.redirectToCheckout({
+              sessionId: '<%= @order.checkout_session_id %>'
+            });
+          });
+        </script>
+ 
+
+          
+          
+      </div>
+</div>
+  
+      
+      
+      
+      
+     

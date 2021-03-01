@@ -1,0 +1,112 @@
+  <!-- Meta tags --> 
+    <% set_meta_tags title: @article.title,
+                 description: @article.subtitle,
+                 og: {
+                     site: 'Amsterdam Psychedelic Research Foundation',
+                     title: @article.title,
+                     description: @article.subtitle,
+                     image: @article.photo.key,
+                 } %>
+
+
+        <%= render 'shared/blogbar' %>
+    <div class="articleshow__article--header" style="background-image: url('<%= cl_image_path @article.photo.key, crop: :fit %>')"> 
+            
+    </div>
+    <div class="articleshow__wrappergrid"> 
+        
+        <div class="articleshow__info-bar">
+        <div class="articleshow__article--heading"> 
+                <h1 class="text-center"><%= @article.title %></h1> 
+                <h2 class="text-center"><%= @article.subtitle %></h2>
+                <p class="text-center">by <%= @article.author %></p>
+            </div>   
+            <div class="articleshow__article--heading-details">
+                <p class="text-center" id="readTime"><%= @read_time_rounded %> min  <i class="fal fa-stopwatch"></i></p>
+              <!--  <p class="text-center" >#<%= @article.typetag %></p>  -->
+            </div>
+        </div>
+        <article class="articleshow__article" onkeyup="calcRT(this)">  
+<!--
+        <div class="articleshow__article--heading"> 
+        
+           <h1><%= @article.title %></h1> 
+            <h2><%= @article.subtitle %></h2>
+            <p>by <%= @article.author %></p>
+            
+            <div class="articleshow__article--heading-details">
+            <p>#<%= @article.typetag %></p>
+            <p id="readTime"><%= @read_time_rounded %> min  <i class="fal fa-stopwatch"></i></p>
+            </div>
+
+        </div>
+
+        -->
+
+        <div class="articleshow__article--body" id="article"> 
+
+           <p class="articlecontent"><%= @article.rich_body %></p>
+
+        </div>
+
+        <div class="articleshow__article--footer"> 
+            
+            <% if user_signed_in? && current_user.admin  %>
+
+            <%= link_to 'Edit article', edit_article_path, class: "btn btn-purple btn-small" %>
+            <%= link_to 'Delete article', article_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-purple btn-small" %>
+            <%= link_to 'Back to Blog', articles_path, class: "btn btn-purple btn-small" %> 
+
+            <% else %>
+
+            <%= link_to 'Back to Blog', articles_path, class: "btn btn-purple btn-small" %> 
+
+            <% end %>
+        </div>
+    </article>
+
+      <div class="share-footer">
+
+          <h4 class="share-footer__text">Share it if you liked it!</h4>
+        <!-- AddToAny BEGIN -->
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_email"></a>
+        <a class="a2a_button_linkedin"></a>
+        <a class="a2a_button_whatsapp"></a>
+        <a class="a2a_button_copy_link"></a>
+        <a class="a2a_button_reddit"></a>
+        </div>
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <!-- AddToAny END -->
+    </div> 
+
+  
+   
+</div>
+
+
+
+<script type="text/javascript">
+
+const post = document.getElementById("article");
+const readingTimeSummary = document.querySelector(".readTime");
+const avgWordsPerMin = 250;
+
+setReadingTime();
+
+function setReadingTime(){
+    let count = getWordCount();
+    let time = Math.ceil(count / avgWordsPerMin);
+
+    readingTimeSummary.innerText = time + " min read";
+
+
+function getWordCount(){
+  return article.innerText.match(/\w+/g).length; }}
+</script>
+
+
+

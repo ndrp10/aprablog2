@@ -1,7 +1,12 @@
-<h2>Log in</h2>
+<%= render 'shared/blogbar' %>
+
+<div class="wrapper">
+<div class="container__login"> 
+
+<h2 class="container__login--heading text-center">Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
+  <div class="container__login--form">
     <%= f.input :email,
                 required: false,
                 autofocus: true,
@@ -9,12 +14,14 @@
     <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+  <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
+  
+    <%= f.submit "Log in", class: "btn-form" %>
+    <%= render 'devise/shared/links' %>
+  
 <% end %>
 
-<%= render "devise/shared/links" %>
+</div>
+</div>

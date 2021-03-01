@@ -1,0 +1,139 @@
+.membershipindex {
+
+    &__container {
+        
+        display: flex;
+        background-image: linear-gradient(rgba($color-primary, .10), rgba($color-primary-dark, .10));
+        flex-direction: column;
+        
+        
+        font-family: $font-primary;
+        
+        margin: 0 auto;
+
+        @media only screen and (max-width: $bp-small) {
+          
+           width: 65vw;
+           min-height: 30vh;
+           padding: 0;
+           margin: 2rem auto;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+          
+           height: 22vh;
+         }
+
+    }
+}
+
+
+
+.membershipshow {
+
+    &__price {
+        margin-top: 2rem;
+    }
+
+    &__bold {
+
+        font-weight: 600;
+    }
+
+    &__heading {
+
+        font-size: 3rem;
+        font-family: $font-display;
+        margin-top: 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            
+            margin-top: 4rem;
+         }
+    }
+
+    &__logo {
+        align-self: center;
+        background-image: url('logotrans.png');
+        background-size: cover;
+        background-position: center;
+        width: 30vw;
+        height: 42vh;
+
+    }
+
+    &__container {
+        
+        display: flex;
+        background-image: linear-gradient(rgba($color-primary, .10), rgba($color-primary-dark, .10));
+        flex-direction: column;
+        border-radius: 5%;
+        align-items: center;
+        font-family: $font-primary;
+        min-height: 70vh;
+        max-width: 55rem;
+        margin: 12vh auto;
+
+        @media only screen and (max-width: $bp-small) {
+            
+           max-width: 90vw;
+           min-height: 72vh;
+           padding: 1rem 3rem;
+        }
+
+        &--box {
+            font-size: 1.9rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5rem;
+            width: 30vw;
+            margin: 5rem auto;
+            height: 20rem;
+            padding: 1rem 1.8rem;
+
+            @media only screen and (max-width: $bp-small) {
+            
+                padding: 0;
+                margin: 3rem auto;
+                width: 80vw;
+             }
+
+             @media only screen and (min-width: $bp-small) and (max-width: $bp-large) {
+            
+                padding: 0;
+                margin: 3rem auto;
+                width: 55vw;
+             }
+
+             &-logo {
+                align-self: center;
+                background-image: url('logotrans.png');
+                background-size: cover;
+                background-position: center;
+                width: 30vw;
+                height: 42vh;
+                margin-bottom: 4vh;
+             }
+
+            &-p {
+
+                font-size: 1.5rem;
+                font-size: 300;
+                margin-bottom: 3rem;
+                line-height: 2;
+
+                
+
+            }
+
+            &-title {
+
+                font-size: 1.9rem;
+                font-weight: 600;
+                margin-bottom: 3rem;
+            }
+        
+        }
+    }
+}

@@ -1,0 +1,193 @@
+
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        font-family: $font-display;
+        border: none;
+        cursor: pointer;
+        transition: all .2s;
+        border-radius: 4rem;
+        font-weight: 300;
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-1px);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .5);
+    }
+    &:hover {
+        transform: translateY(-3px);
+        font-weight: 400;
+    }
+
+    &:after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+
+}
+
+.btn-blue {
+        background-color: $color-secondary;
+        color: $kindawhite;
+
+        &:hover {
+            background-color: $kindawhite;
+            color: $color-secondary;
+            box-shadow: 0 1rem 2rem rgba($color: $kindawhite, $alpha: 0.2);
+        }
+}
+
+.btn-white {
+        background-color: $kindawhite;
+        color: $color-secondary;
+
+        &:hover {
+            background-color: $color-primary-dark;
+            color: $kindawhite;
+            box-shadow: 0 1rem 2rem rgba($color: $color-primary-dark, $alpha: 0.2);
+        }
+}
+
+.btn-purple {
+
+        background-color: $color-primary-dark;
+        color: $kindawhite;
+
+        &:hover {
+           background-color: $color-primary-light-1;
+           box-shadow: 0 1rem 2rem rgba($color: $color-primary-dark, $alpha: 0.2);
+           color: $kindawhite;
+        }
+
+}
+
+.btn-light-purple {
+    
+    background-color: $color-primary-light-2;
+    color: $kindawhite;
+
+    &:hover {
+       background-color: $color-primary-dark;
+       box-shadow: 0 1rem 2rem rgba($color: $kindawhite, $alpha: 0.2);
+    }
+
+}
+
+.btn-green {
+    background-color: $cta-green;
+    color: $kindawhite;
+
+    &:hover {
+       
+       box-shadow: 0 1rem 2rem rgba($color: $color-primary-dark, $alpha: 0.2);
+    }
+
+}
+
+.btn-small {
+
+    padding: 1.5rem 2.5rem;
+    font-size: 1.5rem;
+    @media only screen and (max-width: $bp-medium) {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        }
+}
+
+.btn-medium {
+
+    padding: 2.5rem 3rem;
+    font-size: 1.8rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 1.5rem 2.5rem;
+        font-size: 1.5rem;
+        }
+}
+
+.btn-article {
+
+    margin-bottom: 1rem;
+    margin-right: .5rem;
+    &,
+    &:link,
+    &:visited {
+        
+        padding: 1rem 1.5rem !important;
+       
+        border-radius: 2rem !important;
+        font-size: 1rem !important;
+
+    }
+   
+
+}
+
+
+.btn-text {
+
+    &:link,
+    &:visited {
+        
+        border-radius: 1.5rem!important;
+        font-size: 1.2rem!important;
+        font-weight: 300!important;
+
+    }
+}
+
+
+.btn-form {
+
+    margin-right: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase !important;
+        text-decoration: none !important;
+        text-align: center !important;
+        padding: 1rem 1rem !important;
+        border-radius: 1.5rem !important;
+        transition: all .2s !important;
+        font-family: $font-display !important;
+        font-size: 1.1rem !important;
+        background-color: $color-primary-dark !important;
+        color: $kindawhite !important;
+        font-weight: 300 !important;
+        border: none !important;
+        cursor: pointer !important;
+
+    }
+
+
+    &:active,
+    &:focus {
+        outline: none !important;
+        transform: translateY(-1px) !important;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .5) !important;
+    }
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color: $kindawhite, $alpha: 0.2) !important;
+        background-color: $color-primary !important;
+        color: $kindawhite !important;
+    }
+
+    &:after {
+        transform: scaleX(1.4) scaleY(1.6) !important;
+        opacity: 0 !important;
+    }
+
+   
+   
+
+}

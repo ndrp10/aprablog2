@@ -1,0 +1,78 @@
+
+    
+    <button class="navbar-toggler btnbar__btn" type="button" data-toggle="collapse" data-target="#toggler" aria-controls="#toggler" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fal fa-bars btnbar__icon nicon fa-2x"></i>
+    </button>
+
+    <div class="collapse navbar-collapse btnbar__wrapper" id="toggler">
+       
+        <ul class="navbar-nav btnbar__wrapper--nav">
+        
+    <% if user_signed_in? %> 
+                      <li class="nav-item">
+                        <%= link_to "My Profile", "/myprofile", class: "nav-link" %>
+                    </li>
+                     <li class="nav-item">
+                        <%= link_to "Members area", "/membersarea", class:"nav-link" %>
+                    </li>
+                    <li class="nav-item">
+                       <%= link_to "Blog", '/blog', class:"nav-link" %>
+                      </li>
+                    <li class="nav-item">
+                          <%= link_to "About", '/about', class:"nav-link" %>
+                    </li>
+                    <li class="nav-item">
+                        <%= link_to "Manifesto", "/manifesto", class:"nav-link" %>
+                    </li>
+                    <li class="nav-item">
+                        <%= link_to "Contact Us", "/contactus", class:"nav-link" %>
+                    </li>
+                    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar__logout" %>
+                    
+     <% else %>
+                      
+                     
+                      <li class="nav-item">
+                          <%= link_to "Blog", '/blog', class:"nav-link" %>
+                      </li>
+                      <li class="nav-item">
+                          <%= link_to "About", '/about', class:"nav-link" %>
+                      </li>
+                       <li class="nav-item">
+                          <%= link_to "Manifesto", "/manifesto", class:"nav-link" %>
+                      </li>
+                      <li class="nav-item">
+                          <%= link_to "Contact Us", "/contactus", class:"nav-link" %>
+                      </li>
+                       <div class="btnbar__wrapper--userbtns"> 
+        <%= link_to "Sign Up", new_user_registration_path, class: "navbar__logout" %>
+        <%= link_to "Log In", new_user_session_path, class: "navbar__logout" %>
+    </div>
+         <% end %>
+        </ul>
+
+    
+
+    <div class="btnbar__wrapper--social">
+            
+                <a href="https://www.facebook.com/Research.APRA/" target="_blank">
+                   <%= fa_icon "facebook-f", class: "btnbar__wrapper--social fa-2x" %>
+                </a>
+                <a href="https://www.instagram.com/apra.research/" target="_blank">
+                    <%= fa_icon "instagram", class: "btnbar__wrapper--social fa-2x" %>
+                </a>
+                <a href="https://www.linkedin.com/company/apraresearch/" target="_blank">
+                    <%= fa_icon "linkedin", class: "btnbar__wrapper--social fa-2x" %>
+                </a>
+                <a href="https://twitter.com/APRA_bot" target="_blank">
+                    <%= fa_icon "twitter", class: "btnbar__wrapper--social fa-2x" %>
+                </a>
+                <a href="mailto:Research.APRA@gmail.com">
+                    <%= fa_icon "envelope", class: "btnbar__wrapper--social fa-2x fal" %>
+                </a>
+     </div>
+
+   
+           
+  </div>
+ 

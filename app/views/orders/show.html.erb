@@ -1,0 +1,27 @@
+<%= render 'shared/blogbar' %>
+
+<div class="membershipshow__container">
+<% if @order.state == 'paid' %>
+<div class="membershipshow__logo"></div>
+      <h1 class="text-center membershipshow__heading">Thank you</h1>
+
+      <h2 class="text-center">Your order is <span class="badge badge-primary"><%= @order.state %></span>
+      <div class="membershipshow__container--box">
+      
+         <h5 class="membershipshow__container--box-title">You are a new member of APRA until <%= current_user.premium_until.to_date %></h5>
+         <p class="membershipshow__container--box-p"> <span class="membershipshow__bold">Enjoy</span> our exclusive content and follow our social media for upcoming news and events</p>
+         <%= link_to 'Members Area', '/membersarea', class: "btn btn-small btn-purple" %>
+         </div>
+      <% else %>
+        <h1 class="text-center membershipshow__heading">Something went wrong</h1>
+
+        <h2 class="text-center">Your order is <span class="badge badge-primary"><%= @order.state %></span>
+        <div class="membershipshow__container--box">
+        <h5 class="membershipshow__container--box-title">Payment not succeeded</h5>
+        <p class="membershipshow__container--box-p"> <span class="membershipshow__bold">Unfortunately</span> we could not process your payment. Please try again.</p>
+        <%= link_to 'Try again', '/getmembership', class: "btn btn-small btn-purple" %>
+        </div>
+      <% end %>
+      
+</div>
+   

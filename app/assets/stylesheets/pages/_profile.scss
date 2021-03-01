@@ -1,0 +1,17 @@
+.profile {
+
+    &__container {
+
+       margin: 4vh auto;
+       min-height: 50rem;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       
+    }
+
+    &__ctas {
+        display: flex;
+        justify-content: center;
+    }
+}

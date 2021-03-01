@@ -1,0 +1,74 @@
+.payment {
+
+    &__container {
+
+        margin: 6vh auto;
+        width: 100vw;
+        
+
+
+        &--box {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            width: 45vw;
+            border-radius: 5%;
+            height: 80vh;
+            margin: 0 auto;
+            background-image: linear-gradient(rgba($color-primary, .10), rgba($color-primary-dark, .10));
+
+            @media only screen and (max-width: $bp-medium) {
+                    
+                width: 96vw;
+                height: 80vh;
+                        
+                    }
+            
+            &-p {
+
+                align-self: center;
+                font-weight: 600;
+                font-size: 2rem;
+            }
+
+            &-logo {
+                align-self: center;
+                background-image: url('logotrans.png');
+                background-size: cover;
+                background-position: center;
+                width: 30vw;
+                height: 42vh;
+                color: $color-primary-dark;
+                margin-bottom: 4vh;
+                fill: $color-primary-dark;
+
+                @media only screen and (max-width: $bp-medium) {
+                    
+                    width: 80vw;
+                    height: 44vh;
+                            
+                        }
+            }
+        }
+
+
+    }
+
+    &__heading {
+        font-size: 4rem;   
+        margin-bottom: 3vh;
+
+    }
+
+    &__price {
+
+        margin: 2rem auto;
+        font-size: 2rem;
+    }
+
+    &__cta {
+
+        align-self: center;
+    }
+}

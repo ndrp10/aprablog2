@@ -1,0 +1,53 @@
+<footer class="footer">
+            <div class="footer__logobox">
+            <%= image_tag "whitelogotransp4.png", class: "footer__logo" %>
+            </div>
+            
+            <div class="footer__textbox">
+
+                <p class="footer__textbox--text">2020 Copyright&copy; of Amsterdam Psychedelic Research Foundation.
+                </p>
+                
+                
+
+                <div class="footer__contacts">
+                    <a href="https://www.facebook.com/Research.APRA/" target="_blank">
+                   <%= fa_icon "facebook-f", class: "footer__contacts--icon fa-2x" %>
+                </a>
+                <a href="https://www.instagram.com/apra.research/" target="_blank">
+                    <%= fa_icon "instagram", class: "footer__contacts--icon fa-2x" %>
+                </a>
+                <a href="https://www.linkedin.com/company/apraresearch/" target="_blank">
+                    <%= fa_icon "linkedin", class: "footer__contacts--icon fa-2x" %>
+                </a>
+                <a href="https://twitter.com/APRA_bot" target="_blank">
+                    <%= fa_icon "twitter", class: "footer__contacts--icon fa-2x" %>
+                </a>
+                <a href="mailto:Research.APRA@gmail.com">
+                    <%= fa_icon "envelope", class: "footer__contacts--icon fa-2x fal" %>
+                </a>
+                    </a>
+                </div>
+
+                 
+                <span class="footer__textbox--author">This blog is powered by <a href=""></a></span>
+                <span class="footer__textbox--legal">KVK - 71859217</span>
+                </div>
+                <div class="footer__nav">
+                    <li class="footer__nav--item">
+                       <%= link_to "Blog", '/blog', class: "footer__nav--link" %>
+                      </li>
+                    <li class="footer__nav--item">
+                          <%= link_to "About", '/about', class: "footer__nav--link" %>
+                    </li>
+                    <li class="footer__nav--item text-center">
+                        <%= link_to "Core principles", "/coreprinciples", class: "footer__nav--link" %>
+                    </li>
+                    <li class="footer__nav--item text-center">
+                        <%= link_to "Our organization", "/organization", class: "footer__nav--link" %>
+                    </li>
+                </div>
+                
+                
+            
+        </footer>

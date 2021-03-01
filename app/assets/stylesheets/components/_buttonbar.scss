@@ -1,0 +1,47 @@
+.btnbar {
+
+    &__btn {
+
+        position: fixed;
+        top: 1%;
+        right: 2%;
+        z-index: 10;
+    }
+
+    &__icon {
+
+        color: $kindawhite;
+    }
+
+    &__wrapper {
+
+        height: 40vh;
+        width: 100vw;
+        background-color: $color-primary-dark;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        
+
+        &--nav {
+
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            text-align: center;
+            
+        }
+
+        &--social {
+
+            display: flex;
+            
+            a {
+                color: $kindawhite;
+                margin-right: 2rem;
+            }
+
+        }
+    }
+}

@@ -1,4 +1,9 @@
-<h2>Forgot your password?</h2>
+<%= render 'shared/blogbar'%>
+
+<div class="wrapper">
+
+<div class="container__pswform">
+<h2 class="text-center container__pswform--heading">Forgot your password?</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
@@ -11,8 +16,11 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
+    <%= f.submit "Send me reset password instructions", class: "btn-form" %>
   </div>
 <% end %>
-
+<div class="container__pswform--buttonbox"> 
 <%= render "devise/shared/links" %>
+</div>
+</div>
+</div>

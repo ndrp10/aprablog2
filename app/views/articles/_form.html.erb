@@ -1,0 +1,68 @@
+
+<div class="article__formwrapper">
+    <%= simple_form_for(@article) do |f| %>
+
+    <div class="form-group row">
+        <%= f.label :title, class: "col-1 col-form-label" %> <br>
+        <%= f.text_field :title, size: 20, class: "form-control" %>
+    </div>
+
+     <div class="form-group row">
+        <%= f.label :subtitle, class: "col-2 col-form-label" %> <br>
+        <%= f.text_field :subtitle, size: 20, class: "form-control" %> 
+    </div>
+
+     <div class="form-group row">
+        <%= f.label :author, class: "col-2 col-form-label" %> <br>
+        <%= f.text_field :author, size: 20, class: "form-control" %> 
+    </div>
+
+     <div class="form-group row"> 
+        <%= f.input :typetag, collection: Article::TAGS, prompt: "Which type of blog post is this?", size: 20, class: "form-control" %> 
+    </div>
+
+
+    <div class="form-group row">
+    <%= f.input :photo, as: :file, class: "form-control" %>
+    </div>
+
+
+    <div class="form-inputs">
+        <%= f.label :content, class: "col-2 col-form-label" %> <br>
+        <%= f.rich_text_area :rich_body, class: "richcontent" %>
+        <script> 
+            var autoExpand = function (field) {
+
+            // Reset field height
+            field.style.height = 'inherit';
+
+            // Get the computed styles for the element
+            var computed = window.getComputedStyle(field);
+
+            // Calculate the height
+            var height = parseInt(computed.getPropertyValue('border-top-width'), 10)
+                        + parseInt(computed.getPropertyValue('padding-top'), 10)
+                        + field.scrollHeight
+                        + parseInt(computed.getPropertyValue('padding-bottom'), 10)
+                        + parseInt(computed.getPropertyValue('border-bottom-width'), 10);
+
+	        field.style.height = height + 'px';
+
+        };
+
+        document.addEventListener('input', function (event) {
+            if (event.target.tagName.toLowerCase() !== 'richcontent') return;
+            autoExpand(event.target);
+        }, false);
+            
+            
+            </script>
+    </div>
+
+    <p>
+        <%= f.submit 'Save Article', class: "btn-form mt-5" %>
+    </p>
+
+    <% end %>
+
+</div>

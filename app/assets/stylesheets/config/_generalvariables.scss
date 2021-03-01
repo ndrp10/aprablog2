@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap');
+
+
+
+// COLOR VARIABLES
+$color-primary: #44307D;
+$color-primary-light-1: #6f4a8e;
+$color-primary-light-2: #894298;
+$color-primary-dark: #221f3b;
+$color-secondary: #050505;
+$cta-green: #42B72A;
+
+// TEXT COLORS //
+
+$greybg: #f9f7f6;
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+// GENERAL COLORS //
+
+$kindawhite: #f7f7f7;
+$black: #000000;
+
+// FONT VARIABLES //
+
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+// Responsive breakpoints //
+
+$bp-xxl: 93.5em; // 1500px //
+$bp-xl: 87.5em; // 1400px //
+$bp-largest: 75em; // 1200px //
+$bp-large: 62.5em; // 1000px //
+$bp-medium: 50em; // 800px //
+$bp-small: 37.5em; // 600px //
+$bp-phone: 31em; // circa 500px //
+
+// Margin variables //
+
+$smallest-mrg: 1rem;
+$small-mrg: 2rem;
+$medium-mrg: 5rem;
+$huge-mrg: 10rem;
+$mb-10: 10vh;
+
+.mb-10 {
+    margin-bottom: 10vh;
+}
+

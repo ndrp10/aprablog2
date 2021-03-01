@@ -1,0 +1,221 @@
+.footer {
+
+    background-color: $color-primary-dark;
+    grid-column: 1 / - 1;
+    grid-row: 6 / 7;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+
+    @media only screen and (max-width: $bp-medium) {
+                    
+        flex-direction: column;
+                
+            }
+   
+
+    &__logobox {
+    
+        align-self: center;
+        align-items: center;
+        flex-grow: 2;
+        justify-items: center;
+        display: flex;
+    }
+
+    &__logo {
+        object-fit: cover;
+        width: 35rem;
+        height: 20rem;
+
+        @media only screen and (max-width: $bp-medium) {
+                    
+            width: 30rem;
+            height: 10rem;     
+            }
+
+        @media only screen and (max-width: $bp-small) {
+                    
+            width: 20rem;
+            height: 10rem;       
+            }
+
+
+    }
+
+    &__textbox {
+        
+        padding: 1rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        color: $kindawhite;
+
+        @media only screen and (max-width: $bp-small) {         
+           margin-bottom: 2vh;  
+        }
+
+        &--text {
+         
+          padding: 2rem 9rem;
+          font-size: 1.4rem;
+          font-family: $font-display;
+          font-weight: 300;
+          text-align: center;
+          margin-top: 4rem;
+
+          @media only screen and (max-width: $bp-small) {
+                    
+            padding: 0 9rem;
+            font-size: 1.3rem;
+            margin-top: 0;       
+            }
+        }
+
+    &--legal {
+        font-family: $font-display;
+        font-weight: 200;
+        font-size: 1.2rem;
+        
+    }
+
+    &--author {
+
+        margin-top: 3vh;
+        font-weight: 200;
+        font-size: 1.3rem;
+
+        a {
+            color: $kindawhite;
+            text-decoration: none;
+        }
+       
+    }
+}
+       
+
+    &__contacts {
+       
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-content: stretch;
+
+        @media only screen and (max-width: $bp-small) {
+                    
+           margin-top: 3%;
+            
+        }
+        
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        
+        &--icon {
+
+            display: flex;
+            width: 3rem;
+            height: 3rem;
+            color: $kindawhite;
+            margin-right: 2rem;
+            transition: all .2s;
+            border: none;
+
+            &:hover {
+
+                color: $color-primary-light-1;
+                transform: translateY(-5px);
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                    
+                width: 2rem;
+                height: 2.2rem;
+                
+            }
+
+        }
+
+    }
+
+    &__nav {
+
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        flex-wrap: wrap;
+
+
+        
+        @media only screen and (max-width: $bp-medium) {
+        
+           flex-wrap: nowrap;
+         }
+         @media only screen and (max-width: $bp-phone) {
+        
+            flex-wrap: wrap;
+          }
+       
+
+
+        &--item {
+            font-size: 1.8rem;
+            text-align: center;
+            font-weight: 300;
+            list-style: none;
+            flex-basis: 45%;
+            margin: 2rem auto;
+
+
+            @media only screen and (max-width: $bp-phone) {
+        
+                font-size: 1.2rem;
+             }
+
+            @media only screen and (max-width: $bp-medium) {
+        
+                margin: .5rem auto;
+                font-size: 1.6rem;
+             }
+
+            
+
+        }
+        
+        &--link {
+    
+            &:link,
+            &:visited {
+
+                padding: 1rem 2rem;
+                color: $kindawhite;
+                text-decoration: none;
+                background-image: linear-gradient(100deg, transparent 0%, transparent 50%, $kindawhite 50%);
+                background-size: 220%;
+                transition: all .2s;
+            
+    
+            }
+    
+            &:active,
+            &:hover {
+                background-position: 100%;
+                color: $color-primary-dark;
+                transform: translateX(1rem);
+            }
+        }
+
+
+    }
+}

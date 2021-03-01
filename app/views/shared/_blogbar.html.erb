@@ -1,0 +1,23 @@
+<div class="blogbar">
+    <div> 
+      <%= link_to "/", class: "blogbar__brand" do %>
+        <%= image_tag "whitelogo1.svg", class: "blogbar__brand--img" %>
+        <% end %>
+    </div>
+<% if user_signed_in? && current_user.admin %>
+      <div class="blogbar__nav">
+            <%= link_to "Blog", '/blog', class: "blogbar__nav--link" %>
+            <%= link_to "Create Post", new_article_path, class: "blogbar__nav--link" %>
+      </div>
+<% else %>
+    <div class="blogbar__nav">
+          <% if user_signed_in? && current_user.premium_until >= Date.today %>
+              <%= link_to "Blog", '/blog', class: "blogbar__nav--link" %>
+              <%= link_to "Members Area", "/membersarea", class: "blogbar__nav--link" %>
+          <% else %>
+              <%= link_to "Blog", '/blog', class: "blogbar__nav--link" %>
+              <%= link_to "Join Us", "/getmembership", class: "blogbar__nav--link" %> 
+          <% end %>
+      </div>
+<% end %>
+</div>

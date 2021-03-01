@@ -1,0 +1,165 @@
+.wrapper {
+    margin-top: 13vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 8rem;
+
+    @media only screen and (max-width: $bp-medium) {
+          padding: 2rem 3rem;  
+        
+        } 
+
+    &__signup {
+
+       
+        margin-bottom: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 8rem;
+        margin-top: 6vh;
+
+        @media only screen and (max-width: $bp-small) {
+        
+            margin: 12vh auto;
+            width: 100vw;
+            padding: 0;
+            }
+    }
+}
+
+
+.container__login {
+
+    font-size: 1.8rem;
+    height: 40rem;
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: $bp-large) {
+            
+        height: 70vh;
+        width: 80vw;
+        margin: 0 auto;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+        
+            height: 30vh;
+            width: 100%;
+            }
+    
+
+    input {
+
+        font-size: 1.5rem;
+    }
+
+    &--heading {
+
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        font-family: $font-display;
+        
+    }
+
+    &--form {
+        font-size: 1.8rem;
+    }
+
+    &--buttonbox {
+        margin-top: 2rem;
+        display: flex;
+    }
+    
+}
+
+.form-control {
+    @media only screen and (min-width: $bp-large) {
+        width: 80%;}
+}
+
+.container__signup {
+
+    font-size: 1.8rem;
+    height: 90vh;
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-small) {
+        
+        height: 80vh;
+        width: 100vw;
+        font-size: 1.5rem;
+        padding: 1rem 5rem;
+        }
+
+        &--form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @media only screen and (min-width: $bp-large) {
+                width: 50%;
+                margin: 0 auto;
+            
+            }
+            
+
+        }
+
+
+    input {
+
+        font-size: 1.5rem;
+    }
+
+    &--heading {
+
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        margin-top: 3vh;
+        font-family: $font-display;
+        margin-right: 4vw;
+    }
+
+
+}
+
+
+.container__pswform {
+
+    font-size: 1.8rem;
+
+    input {
+
+        font-size: 1.5rem;
+    }
+    
+
+    &--heading {
+
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        font-family: $font-display;
+    }
+
+
+    &--buttonbox {
+
+        margin-top: 5rem;
+        display: flex;
+        justify-items: center;
+
+    }
+
+    &--cta {
+
+        margin-top: 5rem;
+    }
+}

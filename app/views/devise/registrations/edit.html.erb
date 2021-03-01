@@ -1,9 +1,15 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= render 'shared/blogbar' %>
+
+<div class="wrapper__signup">
+
+<div class="container__signup"> 
+
+<h2 class="text-center container__signup--heading">Edit <%= resource_name.to_s.humanize %> Info</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs container__signup--form">
     <%= f.input :email, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -21,15 +27,26 @@
                 hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
+   <%= f.input :name,
+                required: true,
+                input_html: { autocomplete: "Full Name" }, class: "" %>
+    <%= f.input :education,
+                required: true,
+                collection: User::EDUCATIONS, prompt: "What's your education?", class: "" %>
+    <%= f.input :field_of_study,
+                required: false,
+                input_html: { autocomplete: "field_of_study" }, class: "" %>
+    <%= f.input :academic_interests,
+                required: false,
+                input_html: { autocomplete: "academic_interests" }, class: "" %>
+    <%= f.input :expectations,
+                required: false,
+                input_html: { autocomplete: "expectations" }, class: "" %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, "Update", class: "btn-form" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>

@@ -1,0 +1,156 @@
+.manifesto {
+    
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 80vw;
+        font-size: 1.8rem;
+        font-family: $font-primary;
+
+        @media only screen and (max-width: $bp-small) {   
+            font-size: 1.4rem; 
+            width: 90vw;
+         }
+
+        &--header {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            margin-bottom: 2vh;
+
+            &-picbox {  
+            }
+
+            &-txt {
+                font-size: 3rem;
+                font-family: $font-display;
+            }
+        }
+
+        &--body {
+
+            padding: 2rem 25rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                
+                padding: 2rem 2rem;   
+             }
+
+             @media only screen and (max-width: $bp-small) {
+                
+                padding: 0rem 1.5rem;   
+             }
+
+            &-intro {
+                margin-bottom: 2vh;
+            }
+
+            &-corpus {
+
+                padding: 1rem 8rem;
+
+                @media only screen and (max-width: $bp-small) {
+                
+                    padding: 0rem 1rem;   
+                 }
+
+                &-mainlist {
+
+                }
+
+                &-sublist {
+                    padding: 1rem 4rem;
+
+                    @media only screen and (max-width: $bp-small) {
+                
+                        padding: 1rem 1.5rem;   
+                     }
+                }
+                &-sublist2 {
+                    padding: 1rem 4rem;
+
+                    @media only screen and (max-width: $bp-small) {
+                
+                        padding: 1rem 1.5rem;   
+                     }
+                }
+
+                &-list {
+
+                }
+
+                &-list2 {
+                    padding: 1rem 4rem;
+
+                    @media only screen and (max-width: $bp-small) {
+                
+                        padding: 0rem 1.5rem;   
+                     }
+                }
+
+                &-closing {
+
+                }
+
+                &-author {
+
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    margin-top: 3vh;
+
+                    @media only screen and (max-width: $bp-small) {   
+                        font-size: 1.2rem; 
+                     }
+
+                     font-family: $font-display;
+
+                }
+            }
+
+            &-italic {
+                font-size: 1.3rem;
+
+                @media only screen and (max-width: $bp-small) {   
+                    font-size: 1.1rem; 
+                 }
+            }
+        }
+
+        &--authorbox {
+
+            margin-top: 5vh;
+           
+            border-top: solid 1px;
+            border-color: $color-primary-light-1;
+        }  
+        
+    }
+
+}
+
+.bold {
+    font-size: 1.9rem;
+    font-weight: bold;
+    @media only screen and (max-width: $bp-small) {   
+        font-size: 1.5rem; 
+     }
+}
+
+.list-item {
+    margin-bottom: 2.5vh;
+}
+
+.sublist-item {
+    margin-bottom: 1vh;
+}
+
+.subsublist-item {
+    margin-bottom: 1vh;
+}

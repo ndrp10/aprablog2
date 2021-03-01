@@ -1,2 +1,79 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="maingrid">
+    <div class="header">
+            <%= image_tag "whitelogo4.svg", class: "header__logo" %>
+
+                <% if user_signed_in? %>
+
+                <%= link_to "Blog", '/blog',
+                class: "header__button header__button--white header__button--animated" %>
+
+                <% else %>
+
+                <%= link_to "Join Us", '/getmembership',
+                class: "header__button header__button--white header__button--animated" %>
+                
+                <% end %>
+        </div>
+
+        <div class="aboutus">
+            <h2 class="aboutus__heading">About Us</h2>
+
+            <div class="aboutus__picbox"></div>
+
+            <div class="aboutus__text">
+
+                <p class="aboutus__p1">
+                    <span class="aboutus__p1--bold">APRA</span>
+                    is an interdisciplinary, academic, nonprofit association, officially created in
+                    April 2018 by a group of volunteer students and researchers from Amsterdam
+                    Universities and medical institutes. This action was prompted by several factors
+                    [...]
+                </p>
+
+                <%= link_to "Read More", "/about", class: "aboutus__p1--btn" %>
+
+            </div>
+        </div>
+        <div class="membership" id="member">
+            <h2 class="membership__heading">Join our Community</h2>
+            <div class="membership__picbox"></div>
+            <div class="membership__text">
+                <p class="membership__text--p1">We are a registered
+                    <span class="membership__text--p1-bold">non-profit organisation</span>
+                    run by volunteer university students and researchers. Fees and donations are
+                    fully reinvested covering organisational costs for events and communal
+                    initiatives.</p>
+                <%= link_to "Join Us", "/getmembership", class: "membership__text--cta" %>
+            </div>
+        </div>
+
+        <div class="blogsec" id="blogsec">
+            <h2 class="blogsec__heading">Our Blog</h2>
+            <div class="blogsec__picbox"></div>
+            <div class="blogsec__text">
+                <p class="blogsec__text--p1">We like to provide an
+                    <span class="blogsec__text--p1-bold">insightful perspective</span>
+                    on controversial topics related to psychedelics.
+                    Our blog is public, and accessible to everyone willing to learn more about psychedelics.</p>
+                <%= link_to "Visit", "/blog", class: "blogsec__text--cta" %>
+            </div>
+        </div>
+
+    
+        <div class="eventsect" id="eventsect">
+            <h2 class="eventsect__heading">Events</h2>
+            <div class="eventsect__picbox"></div>
+            <div class="eventsect__text">
+                <p class="eventsect__text--p1">We organise both
+                    <span class="eventsect__text--p1-bold">virtual and physical events</span> with a special focus on discussing psychedelics related matters adopting a scientific approach.
+                    Details of our events and exclusive newsletters are available only for our members.
+                   </p>
+                <%= link_to "Join Us", "/getmembership", class: "eventsect__text--cta" %>
+            </div>
+        </div>
+
+        <%= render 'shared/footer' %>
+
+        
+</div> 
