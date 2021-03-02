@@ -7,7 +7,7 @@ ruby '2.6.3'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'sqlite3', '~> 1.4'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -46,6 +46,7 @@ gem 'will_paginate', '~> 3.3.0'
 gem 'words_counted'
 gem 'bootstrap', '~> 4.0.0'
 gem 'gibbon'
+gem 'urls_for_humans'
 
 
 group :development, :test do  gem 'pry-byebug'

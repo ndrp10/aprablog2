@@ -30,6 +30,7 @@ Membership.create!(name: 'Regular', type: fullprice, description: 'Regular membe
 
 puts 'Creating admins...'
 
-User.create!(email: 'admin2@admin.com', password: '123456', name: 'admin1', education: 'PhD', admin: 'true')
+User.create!(email: 'admin1@admin.com', password: '123456', name: 'admin1', education: 'PhD', admin: 'true')
+User.create!(email: 'admin2@admin.com', password: '123456', name: 'admin2', education: 'PhD', admin: 'true')
 
 puts 'Finished!'
