@@ -5,10 +5,7 @@
         display: flex;
         background-image: linear-gradient(rgba($color-primary, .10), rgba($color-primary-dark, .10));
         flex-direction: column;
-        
-        
-        font-family: $font-primary;
-        
+        font-family: $font-primary; 
         margin: 0 auto;
 
         @media only screen and (max-width: $bp-small) {
@@ -58,8 +55,11 @@
         background-size: cover;
         background-position: center;
         width: 30vw;
-        height: 42vh;
+        height: 35vh;
 
+        @media only screen and (max-width: $bp-small) {
+            width: 55vw;
+         }
     }
 
     &__container {
@@ -70,15 +70,15 @@
         border-radius: 5%;
         align-items: center;
         font-family: $font-primary;
-        min-height: 70vh;
+        min-height: 80vh;
         max-width: 55rem;
-        margin: 12vh auto;
+        margin: 4vh auto;
 
         @media only screen and (max-width: $bp-small) {
             
            max-width: 90vw;
-           min-height: 72vh;
-           padding: 1rem 3rem;
+           min-height: 96vh;
+           padding: 1rem 2rem;
         }
 
         &--box {
@@ -95,7 +95,7 @@
             @media only screen and (max-width: $bp-small) {
             
                 padding: 0;
-                margin: 3rem auto;
+                margin: 0 auto;
                 width: 80vw;
              }
 
@@ -106,15 +106,6 @@
                 width: 55vw;
              }
 
-             &-logo {
-                align-self: center;
-                background-image: url('logotrans.png');
-                background-size: cover;
-                background-position: center;
-                width: 30vw;
-                height: 42vh;
-                margin-bottom: 4vh;
-             }
 
             &-p {
 

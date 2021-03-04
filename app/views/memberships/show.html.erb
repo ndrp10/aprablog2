@@ -2,12 +2,10 @@
 
 <div class="membershipshow__container">
 
-  <h1 class="text-center membershipshow__heading">Become a member</h1>
+        <h1 class="text-center membershipshow__heading">Become a member</h1>
   
-    
-      <div class="membershipshow__container--box">
-            
-            <div class="membershipshow__container--box-logo"> </div>    
+        <div class="membershipshow__logo"></div> 
+        <div class="membershipshow__container--box">               
             <h5 class="membershipshow__container--box-title"><%= @membership.name %> Plan</h5>
             <p class="membershipshow__container--box-p">APRA yearly subscription will give you access to our members area, containing exclusive newsletters, articles and much more.
             <br><span class="membershipshow__bold">This subscription will not be automatically renewed.</span> 
@@ -18,7 +16,7 @@
             <%= form_tag orders_path do %>
             <%= hidden_field_tag 'membership_id', @membership.ids %>
             <%= submit_tag 'Proceed to checkout', class: 'btn-form' %>
-        <% end %>
+            <% end %>
           
       </div>
 </div>

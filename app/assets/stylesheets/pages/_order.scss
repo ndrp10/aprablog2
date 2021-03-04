@@ -1,0 +1,60 @@
+.orders {
+
+    &__container {
+
+        display: flex;
+        background-image: linear-gradient(rgba($color-primary, .10), rgba($color-primary-dark, .10));
+        flex-direction: column;
+        border-radius: 5%;
+        align-items: center;
+        font-family: $font-primary;
+        height: 80vh;
+        max-width: 55rem;
+        margin: 4vh auto;
+        padding: 1rem;
+
+        @media only screen and (max-width: $bp-small) {
+            
+           max-width: 90vw;
+           min-height: 70vh;
+           padding: 1rem 2rem;
+        }
+
+        h1 {
+
+            font-size: 3rem;
+            font-family: $font-display;
+            letter-spacing: .3rem;
+            text-align: center;
+        }
+
+        h5 {
+
+            line-height: 2;
+            letter-spacing: .1rem;
+            font-size: 1.9rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        p {
+
+            font-size: 1.4rem;
+            font-weight: 300;
+            padding: 1rem 10rem;
+            letter-spacing: .1rem;        
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+
+            @media only screen and (max-width: $bp-small) {
+               padding: .5rem;
+             }
+             
+        }
+
+        &__logo {
+
+        }
+
+    }
+}
