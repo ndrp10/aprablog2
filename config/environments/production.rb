@@ -73,7 +73,7 @@ Rails.application.configure do
     user_name: ENV["GMAIL_USERNAME"],
     password: ENV["GMAIL_APP_PASSWORD"]
   }
-  config.action_mailer.default_url_options = { host: "yourapp.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: "apra-website.herokuapp.com" }
 
 
   # Ignore bad email addresses and do not raise email delivery errors.
