@@ -26,6 +26,6 @@ module Aprablog2
 
   Rails.application.configure do
     # Whitelist one hostname
-    config.hosts << "e4eca8a2319e.ngrok.io"
+    config.hosts << "apra-website.herokuapp.com"
   end
 end
