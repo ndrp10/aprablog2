@@ -2,7 +2,7 @@
 .maingrid {
 
     display: grid;
-    grid-template-rows: 90vh 90vh 90vh 90vh 90vh 30vh;
+    grid-template-rows: 90vh 90vh 90vh 90vh 90vh auto;
     grid-template-columns: repeat(9, 1fr);
 
 
@@ -242,7 +242,7 @@
                             
                 grid-row: 3 / 4;
                 grid-column: 1 / - 1;
-                padding: 1rem 2rem;
+                padding: 1rem 0rem;
                 font-size: 1.8rem;   
                 align-self: flex-start; 
             }
@@ -767,7 +767,7 @@
                         
             grid-column: 2 / 4;
             grid-row: 3 / 4;
-            padding: 2rem 1rem;
+            padding: 2rem .5rem;
             margin-top: 0;
             align-self: flex-start;
            
