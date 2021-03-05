@@ -9,7 +9,8 @@
        
        <div class="payment__container--box-logo"></div>
         
-        <p class="payment__container--box-p text-center">Yearly Subscription to <br> APRA Foundation</strong></p>
+        <p class="payment__container--box-p text-center">One Year <br>APRA Membership</p>
+        <%= if current_user.student == 'true' %>
 
         <p class="payment__price"><%= @price %></p>
         <button id="pay" class="payment__cta btn btn-small btn-purple">Purchase</button>

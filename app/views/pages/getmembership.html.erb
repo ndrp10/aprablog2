@@ -21,9 +21,9 @@
                     </p>
 
                  <% if user_signed_in? %>   
-                    <%= link_to "Join Us", membership_path(@membership), class: "getmembership__container--intro-cta btn btn-medium btn-purple" %>
+                    <%= link_to "Become a member", membership_path(@membership), class: "getmembership__container--intro-cta btn btn-medium btn-purple" %>
                 <% else %>
-                    <%= link_to "Join Us", new_user_registration_path, class: "getmembership__container--intro-cta btn btn-medium btn-purple" %>
+                    <%= link_to "Become a member", new_user_registration_path, class: "getmembership__container--intro-cta btn btn-medium btn-purple" %>
                 <% end %>
             </div>
 
