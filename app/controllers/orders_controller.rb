@@ -29,6 +29,12 @@ class OrdersController < ApplicationController
         else
           flash[:alert] = "Something went wrong with your order, please try again"
         end
+
+        if current_user.student?
+          @membership = Membership.where(name: 'Student')
+        else
+          @membership = Membership.where(name: 'Regular')
+        end
     end
 
     private

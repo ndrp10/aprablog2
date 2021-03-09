@@ -55,7 +55,7 @@
         background-size: cover;
         background-position: center;
         width: 30vw;
-        height: 35vh;
+        height: 40vh;
 
         @media only screen and (max-width: $bp-small) {
             width: 55vw;
@@ -86,16 +86,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 5rem;
             width: 30vw;
-            margin: 5rem auto;
-            height: 20rem;
             padding: 1rem 1.8rem;
 
             @media only screen and (max-width: $bp-small) {
             
                 padding: 0;
-                margin: 0 auto;
                 width: 80vw;
              }
 

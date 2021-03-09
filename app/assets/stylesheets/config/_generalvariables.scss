@@ -36,6 +36,7 @@ $bp-large: 62.5em; // 1000px //
 $bp-medium: 50em; // 800px //
 $bp-small: 37.5em; // 600px //
 $bp-phone: 31em; // circa 500px //
+$bp-xs-phone: 24.5em; // circa 400px //
 
 // Margin variables //
 
@@ -63,3 +64,6 @@ $mb-10: 10vh;
     margin-top: 2rem;
 }
 
+.mt-5 {
+    margin-top: 5rem;
+}

@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-  
   root to: 'pages#home'
   get "/", to: "pages#home"
   get "/coreprinciples", to: "pages#coreprinciples"
@@ -8,7 +6,7 @@ Rails.application.routes.draw do
   get "/organization", to: "pages#organization"
   get "/myprofile", to: "pages#myprofile"
   get "/pianos", to: "pianos#index"
-  get "/joinus", to: "pages#getmembership"
+  get "/becomeamember", to: "pages#getmembership"
   get "/blog", to: "articles#index"
   get "/membersarea", to: "articles#membersarea"
   match '/users/:id', to: 'users#show', via: 'get'
@@ -19,7 +17,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :memberships, only: [:index, :show]
   resources :orders, only: [:show, :create] do
-    resources :payments, only: :new
+  resources :payments, only: :new
   end
   
   resources :stripe_webhook, path: '/', only: [] do

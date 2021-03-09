@@ -39,7 +39,8 @@
                 justify-content: center;
                 align-content: center;
                 margin-bottom: 8vh;
-                padding: 2rem 20rem;
+                padding: 2rem 24rem;
+                text-align: center;
 
                 @media only screen and (max-width: $bp-large) {
                     padding: 1rem 4rem; 
@@ -68,7 +69,7 @@
                 width: 100vw;
                 display: grid;
                 grid-template-columns: 5vw repeat(2, 40vw) 5vw;
-                grid-template-rows: 1vh repeat(2, 30vh);
+                grid-template-rows: 1vh repeat(2, 38vh);
                 grid-column-gap: 3rem;
                 grid-row-gap: 8vh;
                 padding: 2rem 5rem;
@@ -105,7 +106,6 @@
                     align-self: center;
                     justify-self: center;
                     font-family: $font-display;
-                    margin-right: 4rem;
 
 
                     @media only screen and (max-width: $bp-large) {
@@ -294,6 +294,31 @@
                 
         }  
         
+    }
+
+    &__box {
+         display: flex;
+        
+        &--img { 
+
+            height: 60%;
+            width: 60%;
+            border-radius: 2rem;
+            margin: 3vh auto; 
+            
+            @media only screen and (max-width: $bp-small) {
+                
+                height: 80%;
+                width: 80%;  
+                
+            
+            }
+
+        }
+        &--caption { 
+           font-size: 1.4rem;
+           font-style: italic; 
+        }
     }
 }
 

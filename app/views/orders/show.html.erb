@@ -14,10 +14,9 @@
          </div>
       <% else %>
       <div class="membershipshow__logo"></div> 
-          <h1 class="">Something went wrong</h1>
-          <h5>Your payment has not succeeded</h5>
-          <p>Please try again</p>
-        <%= link_to 'Try again', '/joinus', class: "btn btn-small btn-purple" %>
+          <h1 class="mb-3 mt-5">Something went wrong</h1>
+          <h5 class="mb-5 mt-2">Your payment has not succeeded</h5>
+        <%= link_to 'Try again', membership_path(@membership), class: "btn btn-small btn-purple" %>
         </div>
       <% end %>
       

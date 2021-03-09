@@ -6,9 +6,9 @@
                      image: asset_path('neuralnetwork.jpg'),
                 } %>
 
-<%= render 'shared/blogbar' %>
-<div class="getmembership">
-    <div class="getmembership__container">      
+<%= render 'shared/blogbar' %>  
+    <div class="getmembership">
+        <div class="getmembership__container">      
 
             <div class="getmembership__container--intro"> 
                 <h1 class="getmembership__container--heading">Join our Community</h1>
@@ -58,42 +58,15 @@
                     Do you want to actively help us shape the future of this field in Amsterdam? Join the APRA organizers! Get in touch for more information and collaboration opportunities. 
                     </p>
                 </div>
-                <!-- <div class="getmembership__container--benefits-box5"> 
-                    <%= fa_icon "donate", class: "getmembership__container--benefits--icon fa-4x fal" %>
-                    <h5 class="getmembership__container--benefits--heading">Transparency</h5>
-                    <p class="getmembership__container--benefits-box5-txt">
-                         Members receive a yearly update describing how resources were used. 
-                    </p>
-                </div>
-                <div class="getmembership__container--benefits-box6"> 
-                    <%= fa_icon "door-open", class: "getmembership__container--benefits--icon fa-4x fal" %>
-                    <h5 class="getmembership__container--benefits--heading">Freedom</h5>
-                    <p class="getmembership__container--benefits-box6--txt">
-                    Membership is not automatically renewed. After one year, you will be asked explicitly whether you want to remain a member or not. You can discontinue your membership at any time with just one click. 
-                    </p>
-                </div>
-                <div class="getmembership__container--benefits-box7"> 
-                    <%= fa_icon "user-secret", class: "getmembership__container--benefits--icon fa-4x fal" %>
-                    <h5 class="getmembership__container--benefits--heading">Privacy</h5>
-                    <p class="getmembership__container--benefits-box7--txt"> 
-                    Your data is considered private and will not be shared with anyone outside the association.
-                    </p>
-                </div>
-                <div class="getmembership__container--benefits-box8"> 
-                    <%= fa_icon "people-arrows", class: "getmembership__container--benefits--icon fa-4x fal" %>
-                    <h5 class="getmembership__container--benefits--heading">Integrity</h5>
-                    <p class="getmembership__container--benefits-box8--txt"> 
-                    APRA reserves the right to discontinue membership, in case the understanding of the APRA <%= link_to "Core principles", "/manifesto", class: "getmembership__container--link" %> on the part of the member comes into question; particularly so for the academic research focus of the association.
-                    </p>
-                </div> -->
-            
             </div>
 
-          <div>
+          <div class="getmembership__box">
+            <%= image_tag "apraevent_2.jpg", class: "getmembership__box--img" %>
+          </div>
 
             <div class="about__container--body-ctas">
                 <%= link_to "About us", "/about", class: "btn btn-small btn-purple btn-text" %>
-                <%= link_to "Core Principles", "/coreprinciples", class: "btn btn-small btn-purple btn-text" %>
+                <%= link_to "Core Principles", "/coreprinciples", class: "btn btn-small btn-purple btn-text", style: "margin-left: 2vw;" %>
             </div>
                 <h2 class="about__container--contacts-header text-center">Follow us on social media</h2>
                 <div class="about__container--contacts">
