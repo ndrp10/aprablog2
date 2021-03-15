@@ -41,12 +41,12 @@
                         <%= link_to "Core principles", "/coreprinciples", class: "navbar__link" %>
                     </li>
                     <li class="navbar__item">
-                        <%= link_to "Our organization", "/organization", class: "navbar__link" %>
+                        <%= link_to "Organization", "/organization", class: "navbar__link" %>
                     </li>
                     <div class="navbar__ctas">
-                    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar__logout" %>
-                    <%= link_to "Edit profile", edit_registration_path(current_user), class: "navbar__logout" %>
-                    <%= link_to "Membership", "/becomeamember", class: "navbar__logout" %>
+                    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar__cta" %>
+                    <%= link_to "Edit profile", edit_registration_path(current_user), class: "navbar__cta" %>
+                    <%= link_to "Membership", "/becomeamember", class: "navbar__cta" %>
                     </div>
                     <% else %>
                       <li class="navbar__item">
@@ -59,10 +59,11 @@
                           <%= link_to "Core principles", "/coreprinciples", class: "navbar__link" %>
                       </li>
                       <li class="navbar__item">
-                          <%= link_to "Our organization", "/organization", class: "navbar__link" %>
+                          <%= link_to "Organization", "/organization", class: "navbar__link" %>
                       </li>
-                      <%= link_to "Sign up", new_user_registration_path, class: "navbar__logout" %>
-                      <%= link_to "Log In", new_user_session_path, class: "navbar__logout" %>
+                      <%= link_to "Members Log In", new_user_session_path, class: "navbar__cta" %> <br>
+                      <%= link_to "Become a member", becomeamember_path, class: "navbar__cta" %> 
+                      
                     <% end %>
                 </ul>
             </nav>

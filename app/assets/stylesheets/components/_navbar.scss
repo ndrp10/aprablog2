@@ -305,7 +305,7 @@
             
         }
 
-     &__logout {
+     &__cta {
             
             &,
             &:link,
@@ -321,9 +321,9 @@
                 border-radius: 4rem;
                 transition: all .2s;
                 position: relative;
-                font-size: 1rem;
-                background-color: $kindawhite;
-                color: $color-secondary;
+                font-size: 1.4rem;
+                background-color: $cta-green;
+                color: $kindawhite;
                 font-weight: 300;
                 border: none;
                 cursor: pointer;
@@ -346,7 +346,7 @@
                 &:hover {
                     transform: translateY(-3px);
                     box-shadow: 0 1rem 2rem rgba($color: $kindawhite, $alpha: 0.2);
-                    background-color: $color-primary-light-1;
+                    background-color: $alt-green;
                     color: $kindawhite;
                 }
         

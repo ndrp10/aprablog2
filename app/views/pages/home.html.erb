@@ -1,6 +1,6 @@
 <%= display_meta_tags title: 'Home' %>
-<div class="maingrid">
-    <div class="header" style="background-image: linear-gradient(rgba(34, 31, 59, .80), rgba(34, 31, 59, .80)), url('<%= asset_path('Hero3.jpg')%>')">
+    <div class="maingrid">
+        <div class="header" style="background-image: linear-gradient(rgba(34, 31, 59, .80), rgba(34, 31, 59, .80)), url('<%= asset_path('Hero3.jpg')%>')">
             <%= image_tag "whitelogo4.svg", class: "header__logo" %>
 
                 <% if user_signed_in? %>
@@ -8,9 +8,10 @@
                 <%= link_to "Blog", '/blog',
                 class: "header__button header__button--white header__button--animated" %>
                 <% else %>
-
-                <%= link_to "Become a member", '/joinus',
-                class: "header__button header__button--white header__button--animated" %>+ 
+                <%= link_to "Members Log in", new_user_session_path,
+                class: "header__button header__button--white header__button--animated btn-green" %>
+                <%= link_to "Become a member", '/becomeamember',
+                class: "header__button header__button--white header__button--animated btn-green" %>
                 <% end %>
         </div>
 
@@ -68,7 +69,5 @@
             </div>
         </div>
 
-        <%= render 'shared/footer' %>
-
-        
-</div> 
+        <%= render 'shared/footer' %>       
+     </div>

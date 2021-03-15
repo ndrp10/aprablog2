@@ -5,6 +5,26 @@
     justify-content: center;
     align-content: center;
 
+    &__logo {
+
+                align-self: center;
+                background-image: url('logotrans.png');
+                background-size: cover;
+                background-position: center;
+                width: 30vw;
+                height: 42vh;
+                color: $color-primary-dark;
+                margin-bottom: 4vh;
+                fill: $color-primary-dark;
+
+                @media only screen and (max-width: $bp-medium) {
+                    
+                    width: 80vw;
+                    height: 44vh;
+                            
+                        }
+    }
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -21,6 +41,7 @@
 
         &--header {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-content: center;
             margin-bottom: 2vh;
@@ -28,9 +49,10 @@
            
 
             &-txt {
-                font-size: 3rem;
+                font-size: 4rem;
                 font-family: $font-display;
                 letter-spacing: .1rem;
+                text-align: center;
             }
         }
 
