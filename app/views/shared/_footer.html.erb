@@ -34,16 +34,16 @@
                 </div>
                 <div class="footer__nav">
                     <li class="footer__nav--item">
-                       <%= link_to "Blog", '/blog', class: "footer__nav--link" %>
+                       <%= link_to "Blog", blog_path, class: "footer__nav--link" %>
+                      </li>
+                       <li class="footer__nav--item">
+                       <%= link_to "Events", events_path, class: "footer__nav--link" %>
                       </li>
                     <li class="footer__nav--item">
-                          <%= link_to "About", '/about', class: "footer__nav--link" %>
+                          <%= link_to "About", about_path, class: "footer__nav--link" %>
                     </li>
                     <li class="footer__nav--item text-center">
-                        <%= link_to "Core principles", "/coreprinciples", class: "footer__nav--link" %>
-                    </li>
-                    <li class="footer__nav--item text-center">
-                        <%= link_to "Our organization", "/organization", class: "footer__nav--link" %>
+                        <%= link_to "Core principles", coreprinciples_path, class: "footer__nav--link" %>
                     </li>
                 </div>
              </div>   
