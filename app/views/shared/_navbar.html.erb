@@ -29,19 +29,22 @@
                 <ul class="navbar__list">
                 <% if user_signed_in? %>
                      <li class="navbar__item">
-                        <%= link_to "Members area", "/membersarea", class: "navbar__link" %>
+                        <%= link_to "Members area", membersarea_path, class: "navbar__link" %>
                     </li>
                     <li class="navbar__item">
-                       <%= link_to "Blog", '/blog', class: "navbar__link" %>
+                       <%= link_to "Blog", blog_path, class: "navbar__link" %>
+                      </li>
+                         <li class="navbar__item">
+                          <%= link_to "Events", events_path, class: "navbar__link" %>
                       </li>
                     <li class="navbar__item">
-                          <%= link_to "About", '/about', class: "navbar__link" %>
+                          <%= link_to "About", about_path, class: "navbar__link" %>
                     </li>
                     <li class="navbar__item">
-                        <%= link_to "Core principles", "/coreprinciples", class: "navbar__link" %>
+                        <%= link_to "Core principles", coreprinciples_path, class: "navbar__link" %>
                     </li>
                     <li class="navbar__item">
-                        <%= link_to "Organization", "/organization", class: "navbar__link" %>
+                        <%= link_to "Organization", organization_path, class: "navbar__link" %>
                     </li>
                     <div class="navbar__ctas">
                     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar__cta" %>
@@ -50,16 +53,20 @@
                     </div>
                     <% else %>
                       <li class="navbar__item">
-                          <%= link_to "Blog", '/blog', class: "navbar__link" %>
-                      </li>
-                      <li class="navbar__item">
-                          <%= link_to "About", '/about', class: "navbar__link" %>
+                          <%= link_to "Blog", blog_path, class: "navbar__link" %>
                       </li>
                        <li class="navbar__item">
-                          <%= link_to "Core principles", "/coreprinciples", class: "navbar__link" %>
+                          <%= link_to "Events", events_path, class: "navbar__link" %>
+                      </li>
+
+                      <li class="navbar__item">
+                          <%= link_to "About", about_path, class: "navbar__link" %>
+                      </li>
+                       <li class="navbar__item">
+                          <%= link_to "Core principles", coreprinciples_path, class: "navbar__link" %>
                       </li>
                       <li class="navbar__item">
-                          <%= link_to "Organization", "/organization", class: "navbar__link" %>
+                          <%= link_to "Organization", organization_path, class: "navbar__link" %>
                       </li>
                       <%= link_to "Members Log In", new_user_session_path, class: "navbar__cta" %> <br>
                       <%= link_to "Become a member", becomeamember_path, class: "navbar__cta" %> 

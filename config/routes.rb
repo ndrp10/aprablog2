@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/becomeamember", to: "pages#getmembership"
   get "/blog", to: "articles#index"
   get "/membersarea", to: "articles#membersarea"
+  get "/events", to: "articles#events"
   match '/users/:id', to: 'users#show', via: 'get'
   get '/user' => "pages#getmembership", :as => :user_root
 

@@ -21,6 +21,10 @@
         <%= f.input :typetag, collection: Article::TAGS, prompt: "Which type of blog post is this?", size: 20, class: "form-control" %> 
     </div>
 
+     <%= f.input :private, collection: Article::ANSWERS,
+                 prompt: "Select 'Yes' to make this post visible to members only",
+                 class: "form-check-input" %>
+
 
     <div class="form-group row">
     <%= f.input :photo, as: :file, class: "form-control" %>

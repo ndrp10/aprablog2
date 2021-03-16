@@ -1,0 +1,32 @@
+  <% set_meta_tags title: 'Events',
+                  description: 'here we will publish our events and gatherings. Subscribe as a member to see the details',
+                 og: {
+                     title: 'Events',
+                     description: 'welcome to our blog area, here you will find exciting content about psychedelic research',
+                     image: asset_path('neuralnetwork.jpg'),
+                } %>
+ 
+ 
+ <%= render 'shared/blogbar' %>
+ 
+ <div class="article__grid"> 
+    
+    <% @articles.each do |article| %>
+        <div class="article__box" style="background-image: linear-gradient(rgba(34, 31, 59, .40), rgba(34, 31, 59, .40)), url('<%= cl_image_path article.photo.key, crop: :fill %>')">
+            <div class="article__box--details"> 
+                    <h3><%= article.title %></h3>
+                    <h5><%= article.subtitle unless article.subtitle.nil? %></h5>
+                    <p><%= article.author unless article.author.nil? %></p>  
+            </div> 
+            <div class="article__box--details-box2">
+                    <p>#<%= article.typetag %></p>
+                    <%= link_to 'Read More', article_path(article), class: "btn-article btn btn-medium btn-white" %>
+            </div> 
+            
+        </div>
+
+    <% end %>
+ </div>
+       <div class="pagination__article">
+       <%= will_paginate @articles, class:"pagination__article" %>
+       </div>

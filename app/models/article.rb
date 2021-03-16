@@ -4,6 +4,7 @@ class Article < ActiveRecord::Base
     validates :title, presence: true, length: { minimum: 6, maximum: 150}
     validates :subtitle, presence: true, length: { minimum: 6, maximum: 150}
     validates :typetag, presence: true
+    validates :private, presence: true
     validates :photo, presence: true
     validates :rich_body, presence: true
 
@@ -12,6 +13,7 @@ class Article < ActiveRecord::Base
     urls_for_humans :title
 
     TAGS = ["Article", "Event", "Newsletter", "Journal Club"]
+    ANSWERS = ["Yes", "No"]
     validates :typetag, inclusion: {in: TAGS}
 
 

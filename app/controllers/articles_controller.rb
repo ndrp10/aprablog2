@@ -1,13 +1,14 @@
 class ArticlesController < ApplicationController
     before_action :set_article, only: [:show, :edit, :update, :destroy]
-    skip_before_action :authenticate_user!, only: [:index, :show]
+    skip_before_action :authenticate_user!, only: [:index, :show, :events]
     
     def membersarea
         now = Date.today
         @user = User.find(current_user.id)
         
         if current_user.premium_until >= now || current_user.admin
-            @articles = Article.where.not(typetag: "Article").paginate(page: params[:page], per_page: 10)
+        
+            @articles = Article.where(private: "Yes").paginate(page: params[:page], per_page: 10)
             
         else
             redirect_to blog_path, notice: "You need to subscribe to access our members area"   
@@ -15,10 +16,14 @@ class ArticlesController < ApplicationController
 
         one_week_ago = now - 7
 
-        if current_user.premium_until <= one_week_ago
+        if current_user.premium_until <= one_week_ago && current_user.admin.nil?
             UserMailer.membershipexpiring(@user).deliver
         else
         end
+    end
+
+    def events
+        @articles = Article.where(typetag: "Event", private: "No").paginate(page: params[:page], per_page: 10) 
     end
 
 
@@ -34,7 +39,7 @@ class ArticlesController < ApplicationController
 
     def index
     
-        @articles = Article.where(typetag: "Article").paginate(page: params[:page], per_page: 10) 
+        @articles = Article.where(typetag: "Article", private: "No").paginate(page: params[:page], per_page: 10) 
              
     end
 
@@ -100,7 +105,7 @@ private
     end
 
     def article_params
-        params.require(:article).permit(:title, :subtitle, :content, :typetag, :photo, :rich_body, :author)
+        params.require(:article).permit(:title, :subtitle, :content, :typetag, :photo, :rich_body, :author, :private)
     end
 
 end
