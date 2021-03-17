@@ -3,35 +3,35 @@
     <%= simple_form_for(@article) do |f| %>
 
     <div class="form-group row">
-        <%= f.label :title, class: "col-1 col-form-label" %> <br>
+        <%= f.label :title, class: "col-4 col-form-label" %> <br>
         <%= f.text_field :title, size: 20, class: "form-control" %>
     </div>
 
      <div class="form-group row">
-        <%= f.label :subtitle, class: "col-2 col-form-label" %> <br>
+        <%= f.label :subtitle, class: "col-4 col-form-label" %> <br>
         <%= f.text_field :subtitle, size: 20, class: "form-control" %> 
     </div>
 
      <div class="form-group row">
-        <%= f.label :author, class: "col-2 col-form-label" %> <br>
-        <%= f.text_field :author, size: 20, class: "form-control" %> 
+        <%= f.label :author, class: "col-4 col-form-label" %> <br>
+        <%= f.text_field :author, size: 10, class: "form-control" %> 
     </div>
 
      <div class="form-group row"> 
         <%= f.input :typetag, collection: Article::TAGS, prompt: "Which type of blog post is this?", size: 20, class: "form-control" %> 
     </div>
-
+    <div class="form-group row">
      <%= f.input :private, collection: Article::ANSWERS,
                  prompt: "Select 'Yes' to make this post visible to members only",
-                 class: "form-check-input" %>
-
+                 class: "form-check-input form-control" %>
+    </div>
 
     <div class="form-group row">
     <%= f.input :photo, as: :file, class: "form-control" %>
     </div>
 
 
-    <div class="form-inputs">
+    <div class="form-inputs form-group row">
         <%= f.label :content, class: "col-2 col-form-label" %> <br>
         <%= f.rich_text_area :rich_body, class: "richcontent" %>
         <script> 

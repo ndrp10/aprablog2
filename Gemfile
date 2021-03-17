@@ -30,7 +30,6 @@ gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.2', require: true
 gem 'devise'
 gem 'meta-tags'
-gem 'urls_for_humans'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'font-awesome-rails'

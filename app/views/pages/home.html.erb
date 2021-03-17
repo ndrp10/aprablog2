@@ -4,7 +4,7 @@
             <%= image_tag "whitelogo4.svg", class: "header__logo" %>
 
                 <% if user_signed_in? %>
-                <%= link_to "Go to Blog", '/blog',
+                <%= link_to "Go to Blog", blog_path,
                 class: "header__button header__button--white header__button--animated btn-green" %>
                 <% else %>
                 <%= link_to "Members Log in", new_user_session_path,
