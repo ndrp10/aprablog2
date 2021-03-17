@@ -105,7 +105,7 @@ private
     end
 
     def article_params
-        params.require(:article).permit(:title, :subtitle, :content, :typetag, :photo, :rich_body, :author, :private)
+        params.require(:article).permit(:title, :subtitle, :content, :typetag, :photo, :rich_body, :author, :private )
     end
 
 end

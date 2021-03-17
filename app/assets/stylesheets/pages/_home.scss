@@ -46,7 +46,13 @@
         @media only screen and (max-width: $bp-small) {
             margin-top: 4vh;
            height: 40rem;
-           width: 38rem;
+           width: 40rem;
+        }
+
+        @media only screen and (max-width: $bp-xs-phone) {
+            margin-top: 4vh;
+           height: 40rem;
+           width: 32rem;
         }
 
        
