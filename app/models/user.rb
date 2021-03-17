@@ -11,23 +11,26 @@ class User < ApplicationRecord
   
   
 
-  #### def increment_premium
+    #### def increment_premium
    # if premium_until.nil? || (premium_until < Date.today)
     #  current_user.update(:premium_until => Date.today)
    # end
    #   self.premium_until += 1.year
- # end
+    # end
 
   EDUCATIONS = ["Bachelor of Science", "Master of Science", "PhD", "Post-doctorate or higher"]   
 
   private
   def set_premium
-    self.premium_until = Date.today if premium_until.nil? || (premium_until < Date.today)     
+    self.premium_until = Date.yesterday if premium_until.nil? || (premium_until < Date.today)     
   end
 
   def send_welcome_email
     UserMailer.with(user: self).welcome.deliver_now
   end
+
+
+  
 
   def set_admin
     self.admin == 'false' if admin.nil?
