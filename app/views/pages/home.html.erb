@@ -1,4 +1,10 @@
-<%= display_meta_tags title: 'Home' %>
+<% set_meta_tags title: 'Home',
+                  description: 'APRA in an interdisciplinary association of students, researchers and enthusiast of psychedelics scientific and practical aspects',
+                 og: {
+                     title: 'Home',
+                     description: 'APRA in an interdisciplinary association of students, researchers and enthusiast of psychedelics scientific and practical aspects',
+                     image: asset_path('Hero3.jpg'),
+                } %>
     <div class="maingrid">
         <div class="header" style="background-image: linear-gradient(rgba(34, 31, 59, .80), rgba(34, 31, 59, .80)), url('<%= asset_path('Hero3.jpg')%>')">
             <%= image_tag "whitelogo4.svg", class: "header__logo" %>
