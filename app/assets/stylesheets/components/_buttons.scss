@@ -191,3 +191,61 @@
    
 
 }
+
+.btn-member {
+
+            &,
+            &:link,
+            &:visited {
+            
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: .1rem;
+            padding: 1.5rem 3rem;
+            display: inline-block;
+            border-radius: 5rem;
+            transition: all .2s;
+            font-size: 1.8rem;
+            font-weight: 400;
+          
+            @media only screen and (max-width: $bp-small) {
+                
+                padding: 1rem 1.5rem;
+                font-size: 1.4rem;            
+                }
+        }
+        
+            &:active,
+            &:focus {
+                outline: none;
+                transform: translateY(-1px);
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .2);
+            }
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 1rem 2rem rgba($color: $kindawhite, $alpha: 0.2);
+                background-color: $alt-green;
+                color: $kindawhite;
+            }
+        
+        
+            &:after {
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+        
+            &::after {
+                content: "";
+                display: inline-block;
+                height: 100%;
+                width: 100%;
+                border-radius: 10rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: all .4s;
+        }
+}
