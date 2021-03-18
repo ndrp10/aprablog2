@@ -25,12 +25,17 @@ fullprice = Type.create!(name: 'fullprice')
 
 puts 'Creating Plans...'
 
-Membership.create!(name: 'Student', type: discounted, description: 'Student membership plan', price: 1000)
-Membership.create!(name: 'Regular', type: fullprice, description: 'Regular membership plan', price: 2000)
+student = Membership.create!(name: 'Student', type: discounted, description: 'Student membership plan', price: 1000)
+regular = Membership.create!(name: 'Regular', type: fullprice, description: 'Regular membership plan', price: 2000)
 
 puts 'Creating admins...'
 
-User.create!(email: 'admin1@admin.com', password: '123456', name: 'admin1', education: 'PhD', admin: 'true')
-User.create!(email: 'admin2@admin.com', password: '123456', name: 'admin2', education: 'PhD', admin: 'true')
+admin1 = User.create!(email: 'admin1@admin.com', password: '123456', name: 'admin1', education: 'PhD', admin: 'true', confirmed_at: Time.now.utc)
+
+admin1.save
+
+admin2 = User.create!(email: 'admin2@admin.com', password: '123456', name: 'admin2', education: 'PhD', admin: 'true', confirmed_at: Time.now.utc)
+
+admin2.save
 
 puts 'Finished!'

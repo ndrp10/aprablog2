@@ -1,5 +1,5 @@
 .wrapper {
-    margin-top: 13vh;
+    margin-top: 5vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,5 +161,16 @@
     &--cta {
 
         margin-top: 5rem;
+    }
+}
+
+.user-links {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    a {
+        margin-right: 1rem;
     }
 }

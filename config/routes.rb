@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get "/events", to: "articles#events"
   get '/user' => "pages#becomeamember", :as => :user_root
 
-  devise_for :users, :path_prefix => 'd'
+  devise_for :users, :path_prefix => 'd', controllers: { confirmations: 'confirmations' }
   resources :articles
   resources :memberships, only: [:index, :show]
   resources :orders, only: [:show, :create] do

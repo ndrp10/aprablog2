@@ -6,17 +6,9 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :confirmable
   has_many :orders
   
-  
-
-    #### def increment_premium
-   # if premium_until.nil? || (premium_until < Date.today)
-    #  current_user.update(:premium_until => Date.today)
-   # end
-   #   self.premium_until += 1.year
-    # end
 
   EDUCATIONS = ["Bachelor of Science", "Master of Science", "PhD", "Post-doctorate or higher"]   
 
@@ -29,13 +21,12 @@ class User < ApplicationRecord
     UserMailer.with(user: self).welcome.deliver_now
   end
 
-
   
 
   def set_admin
     self.admin == 'false' if admin.nil?
   end
-end
+
   
 
   def increment_premium
@@ -49,6 +40,8 @@ end
   def self.find_by_uid!(uid)
     User.find_by!("name = :p OR id = :p", p: uid)
   end
+
+end
 
 
   
