@@ -11,7 +11,6 @@
         cursor: pointer;
         transition: all .2s;
         border-radius: 4rem;
-        font-weight: 300;
     }
 
     &:active,
@@ -84,8 +83,9 @@
     color: $kindawhite;
 
     &:hover {
-       
-       box-shadow: 0 1rem 2rem rgba($color: $color-primary-dark, $alpha: 0.2);
+        background-color: $alt-green;
+        color: $kindawhite;
+        box-shadow: 0 1rem 2rem rgba($color: $color-primary-dark, $alpha: 0.2);
     }
 
 }
@@ -104,6 +104,7 @@
 
     padding: 2.5rem 3rem;
     font-size: 1.8rem;
+    font-weight: 400;
 
     @media only screen and (max-width: $bp-medium) {
         padding: 1.5rem 2.5rem;
