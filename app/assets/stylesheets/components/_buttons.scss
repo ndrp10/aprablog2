@@ -204,7 +204,7 @@
             text-align: center;
             letter-spacing: .1rem;
             padding: 1.5rem 3rem;
-            display: inline-block;
+           
             border-radius: 5rem;
             transition: all .2s;
             font-size: 1.8rem;
@@ -237,16 +237,5 @@
                 opacity: 0;
             }
         
-            &::after {
-                content: "";
-                display: inline-block;
-                height: 100%;
-                width: 100%;
-                border-radius: 10rem;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: all .4s;
-        }
+    
 }
