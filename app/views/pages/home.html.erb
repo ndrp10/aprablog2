@@ -8,7 +8,6 @@
     <div class="maingrid">
         <div class="header" style="background-image: linear-gradient(rgba(34, 31, 59, .80), rgba(34, 31, 59, .80)), url('<%= asset_path('Hero3.jpg')%>')">
             <%= image_tag "whitelogo4.svg", class: "header__logo" %>
-
                 <% if user_signed_in? %>
                 <%= link_to "Go to Blog", blog_path,
                 class: "header__button header__button--white header__button--animated btn-green" %>
