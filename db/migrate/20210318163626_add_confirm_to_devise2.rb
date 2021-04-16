@@ -10,4 +10,3 @@ class AddConfirmToDevise2 < ActiveRecord::Migration[6.0]
      add_index  :users, :confirmation_token, :unique => true 
    end
 end
-20210318172427
