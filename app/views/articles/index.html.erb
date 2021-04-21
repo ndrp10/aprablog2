@@ -10,7 +10,6 @@
  <%= render 'shared/blogbar' %>
  
  <div class="article__grid"> 
-    
     <% @articles.each do |article| %>
         <div class="article__box" style="background-image: linear-gradient(rgba(34, 31, 59, .40), rgba(34, 31, 59, .40)), url('<%= cl_image_path article.photo.key, crop: :fill %>')">
             <div class="article__box--details"> 
@@ -22,9 +21,7 @@
                     <p>#<%= article.typetag %></p>
                     <%= link_to 'Read More', article_path(article), class: "btn-article btn btn-medium btn-white" %>
             </div> 
-            
         </div>
-
     <% end %>
  </div>
        <div class="pagination__article">

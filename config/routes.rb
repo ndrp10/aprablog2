@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "/blog", to: "articles#index"
   get "/membersarea", to: "articles#membersarea"
   get "/events", to: "articles#events"
-  get '/user' => "pages#becomeamember", :as => :user_root
+  get '/user' => "pages#home", :as => :user_root
 
   devise_for :users, :path_prefix => 'd', controllers: { confirmations: 'confirmations' }
   resources :articles
