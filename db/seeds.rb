@@ -17,6 +17,7 @@ puts 'Cleaning database...'
 Order.destroy_all
 Membership.destroy_all
 Type.destroy_all
+User.destroy_all
  
 puts 'Creating Categories...'
 
@@ -37,5 +38,7 @@ admin1.save
 admin2 = User.create!(email: 'admin2@admin.com', password: '123456', name: 'admin2', education: 'PhD', admin: 'true', confirmed_at: Time.now.utc)
 
 admin2.save
+
+admin3 = User.create!(email: 'marco.aqil@gmail.com', password: '123456', name: 'Marco', education: 'PhD', admin: 'true', confirmed_at: Time.now.utc)
 
 puts 'Finished!'
