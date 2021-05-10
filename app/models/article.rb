@@ -12,7 +12,7 @@ class Article < ActiveRecord::Base
     has_rich_text :rich_body
     urls_for_humans :title
 
-    TAGS = ["Article", "Event", "Newsletter", "Journal Club"]
+    TAGS = ["Article", "Event", "Newsletter"]
     ANSWERS = ["Yes", "No"]
     validates :typetag, inclusion: {in: TAGS}
 
