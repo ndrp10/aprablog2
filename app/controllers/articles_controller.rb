@@ -7,15 +7,11 @@ class ArticlesController < ApplicationController
         @user = User.find(current_user.id)
         
         if current_user.premium_until >= now || current_user.admin
-        
-            @articles = Article.where(private: "Yes").paginate(page: params[:page], per_page: 10)
-            
+            @articles = Article.where(private: "Yes").paginate(page: params[:page], per_page: 10).order(updated_at: :desc)    
         else
             redirect_to blog_path, notice: "You need to subscribe to access our members area"   
         end
-
         one_week_ago = now - 7
-
         if current_user.premium_until <= one_week_ago && current_user.admin.nil?
             UserMailer.membershipexpiring(@user).deliver
         else
@@ -23,7 +19,7 @@ class ArticlesController < ApplicationController
     end
 
     def events
-        @articles = Article.where(typetag: "Event", private: "No").paginate(page: params[:page], per_page: 10) 
+        @articles = Article.where(typetag: "Event", private: "No").paginate(page: params[:page], per_page: 10).order(updated_at: :desc) 
     end
 
 
