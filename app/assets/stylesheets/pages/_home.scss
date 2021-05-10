@@ -4,8 +4,6 @@
     display: grid;
     grid-template-rows: 100vh 90vh 90vh 90vh 90vh auto;
     grid-template-columns: repeat(9, 1fr);
-
-
     @media only screen and (max-width: $bp-medium) {             
         grid-template-rows: 90vh 90vh 90vh 90vh 95vh auto;
     }
@@ -13,6 +11,8 @@
         grid-template-rows: repeat(5, 100vh) auto;
         grid-template-columns: repeat(9, 1fr); 
     }
+
+    overflow-x: hidden;
     
 }
 
