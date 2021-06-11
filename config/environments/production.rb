@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.hosts << "apra-website.herokuapp.com"
+  config.hosts << "apra.science"
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
