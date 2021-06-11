@@ -48,44 +48,37 @@
            margin-top: 4vh;
            height: 32rem;
            width: 32rem;
-        }  
-    }
-
-    &__brandname {
-        font-size: 4rem;
-        font-weight: 600;
-        font-family: $font-primary;
-        color: white;
-        text-align: center;
-        margin-bottom: 5rem;
-        width: 65%;
-        margin: 0 auto;
-
-
-        @media only screen and (max-width: $bp-small) {
-           font-size: 3.5rem;
-           margin-bottom: 3rem;
-         } 
-    }
-
-    
-    &__button {
-         
-        grid-row: 3 / 4;
-        grid-column: 2 / 3;
-        align-self: center;
-        justify-self: center;
-    
+        }
         
+        &--caption {
+            height: 50rem;
+            width: 50rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__ctas {
+        margin: 0 auto;
+        width: 65%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__button {
             &,
             &:link,
             &:visited {
-                text-transform: uppercase;
+            text-transform: uppercase;
             padding: 1.5rem 3rem;
             border-radius: 3rem;
             margin-bottom: 1vh;
             margin-top: 2vh;
             font-size: 1.8rem;
+            background-color: $color-primary;
+            color: white;
+            margin-right: 1rem;
+            border: solid 1px white;
 
             @media only screen and (max-width: $bp-small) {
                 margin-top: 2vh;
@@ -103,31 +96,11 @@
             }
             &:hover {
                 transform: translateY(-3px);
-                background-color: $alt-green;
+                background-color: $cta-green;
                 box-shadow: 0 1rem 2rem rgba($color: $kindawhite, $alpha: 0.2);
                 text-decoration: none;
                 color: $kindawhite;
             }
-        
-            &:after {
-                transform: scaleX(1.4) scaleY(1.6);
-                opacity: 0;
-            }
-        
-            &::after {
-                content: "";
-                display: inline-block;
-                height: 100%;
-                width: 100%;
-                border-radius: 10rem;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: all .4s;
-            }
-        
-        
         }
     }
 

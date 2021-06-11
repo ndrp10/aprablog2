@@ -8,16 +8,18 @@
     <div class="maingrid">
         <div class="header" style="background-image: linear-gradient(rgba(34, 31, 59, .80), rgba(34, 31, 59, .80)), url('<%= asset_path('Hero3.jpg')%>')">
             <%= image_tag "whitelogo4.svg", class: "header__logo" %>
-            <h1 class="header__brandname">Amsterdam Psychedelic<br>Research Association</h1>
+            <div class ="header__ctas">
                 <% if user_signed_in? %>
                 <%= link_to "Go to Blog", blog_path,
-                class: "header__button header__button--white header__button--animated btn-green" %>
+                class: "header__button" %>
                 <% else %>
                 <%= link_to "Members login", new_user_session_path,
-                class: "header__button header__button--white header__button--animated btn-green" %>
+                class: "header__button" %>
                 <%= link_to "Become a member", '/becomeamember',
-                class: "header__button btn-green" %>
+                class: "header__button" %>
                 <% end %>
+            </div>
+            <%= image_tag "logo-caption.png", class: "header__logo--caption"%>
         </div>
 
         <div class="aboutus">
