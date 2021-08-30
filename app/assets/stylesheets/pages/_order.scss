@@ -8,7 +8,7 @@
         border-radius: 5%;
         align-items: center;
         font-family: $font-primary;
-        height: 80vh;
+        height: 85vh;
         max-width: 55rem;
         margin: 4vh auto;
         padding: 1rem;
@@ -16,7 +16,7 @@
         @media only screen and (max-width: $bp-small) {
             
            max-width: 90vw;
-           min-height: 70vh;
+           min-height: 75vh;
            padding: 1rem 2rem;
         }
 
