@@ -49,7 +49,11 @@
                     <div class="navbar__ctas">
                     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "navbar__cta" %>
                     <%= link_to "Edit profile", edit_registration_path(current_user), class: "navbar__cta" %>
-                    <%= link_to "Membership", "/becomeamember", class: "navbar__cta" %>
+                        <% if current_user.premium_until >= Time.now %>
+                        <%= link_to "Subscribe to Newsletter", "http://eepurl.com/gh_N5z", class: "navbar__cta" %>
+                        <% else %>
+                        <%= link_to "Membership", "/becomeamember", class: "navbar__cta" %>
+                        <%end%>
                     </div>
                     <% else %>
                       <li class="navbar__item">
