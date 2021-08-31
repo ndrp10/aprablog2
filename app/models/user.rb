@@ -21,8 +21,6 @@ class User < ApplicationRecord
     UserMailer.with(user: self).welcome.deliver_now
   end
 
-  
-
   def set_admin
     self.admin == 'false' if admin.nil?
   end
