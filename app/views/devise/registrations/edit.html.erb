@@ -4,7 +4,7 @@
 
 <div class="container__signup"> 
 
-<h2 class="text-center container__signup--heading">Edit <%= resource_name.to_s.humanize %> Info</h2>
+<h2 class="text-center container__signup--heading">Update your <%= resource_name.to_s.humanize %> profile</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
@@ -30,6 +30,7 @@
    <%= f.input :name,
                 required: true,
                 input_html: { autocomplete: "Full Name" }, class: "" %>
+   <%= f.input :student, as: :boolean, hint: 'Tick the box if you are currently enrolled as a student' %>
     <%= f.input :education,
                 required: true,
                 collection: User::EDUCATIONS, prompt: "What's your education?", class: "" %>

@@ -24,8 +24,7 @@
     <%= f.input :name,
                 required: true,
                 input_html: { autocomplete: "Full Name" }, class: "" %>
-   <%= f.input :student,
-                hint: "Please mark this box if you are a student", class: "form-check-input" %>
+    <%= f.input :student, as: :boolean, hint: 'Tick the box if you are currently enrolled as a student' %>
     <%= f.input :education,
                 required: true,
                 collection: User::EDUCATIONS, prompt: "What's your education?", class: "" %>

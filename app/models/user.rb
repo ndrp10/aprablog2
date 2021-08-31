@@ -26,9 +26,7 @@ class User < ApplicationRecord
   def set_admin
     self.admin == 'false' if admin.nil?
   end
-
-  
-
+ 
   def increment_premium
       self.premium_until = Date.now + 1.year
   end
