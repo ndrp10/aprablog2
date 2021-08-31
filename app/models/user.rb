@@ -25,10 +25,6 @@ class User < ApplicationRecord
     self.admin == 'false' if admin.nil?
   end
  
-  def increment_premium
-      self.premium_until = Date.now + 1.year
-  end
-
   def signup_params
       params.require(:user).permit(:name, :student, :education, :field_of_study, :academic_interests, :expectations, :admin)
   end
