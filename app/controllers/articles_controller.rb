@@ -34,9 +34,7 @@ class ArticlesController < ApplicationController
     end
 
     def index
-    
-        @articles = Article.where(typetag: "Article", private: "No").paginate(page: params[:page], per_page: 10) 
-             
+        @articles = Article.where(typetag: "Article", private: "No").paginate(page: params[:page], per_page: 10)        
     end
 
     def create
