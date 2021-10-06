@@ -14,9 +14,6 @@ class Article < ActiveRecord::Base
 
     TAGS = ["Article", "Event", "Newsletter"]
     ANSWERS = ["Yes", "No"]
-    validates :typetag, inclusion: {in: TAGS}
-
-
-   
+    validates :typetag, inclusion: {in: TAGS}   
 
 end
