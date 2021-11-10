@@ -6,7 +6,7 @@ class PagesController < ApplicationController
   end
 
   def organization
-   
+
   end
 
   def about
@@ -17,7 +17,7 @@ class PagesController < ApplicationController
 
       @membership = Membership.where(name: 'Student')
 
-    elsif user_signed_in? 
+    elsif user_signed_in?
 
       @membership = Membership.where(name: 'Regular')
 
@@ -33,6 +33,18 @@ class PagesController < ApplicationController
   end
 
   def blog
+  end
+
+  def admin
+    @members = User.all.filter do |member|
+      member.premium_until >= Time.now
+    end
+
+     if current_user.admin == 'false'
+            redirect_to root_path
+        else
+            render 'admin'
+        end
   end
 
 end

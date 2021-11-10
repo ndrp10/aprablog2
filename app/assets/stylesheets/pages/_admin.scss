@@ -1,0 +1,25 @@
+.admin {
+
+  &__wrapper {
+    display: flex;
+    margin: 2vh auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__userbox {
+    margin: 2vh auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid $black;
+    border-bottom: 2px solid $black;
+    color: $color-primary;
+    padding: 1vh 1vw;
+
+    h5 {font-size: 1.6rem;}
+
+    p {font-size: 1.5rem; margin-top: 1vh;}
+  }
+}

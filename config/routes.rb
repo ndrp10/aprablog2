@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/blog", to: "articles#index"
   get "/membersarea", to: "articles#membersarea"
   get "/events", to: "articles#events"
+  get "/admin", to: "pages#admin"
   get '/user' => "pages#home", :as => :user_root
 
   devise_for :users
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
   resources :orders, only: [:show, :create] do
   resources :payments, only: :new
   end
-  
+
   resources :stripe_webhook, path: '/', only: [] do
 
     collection do
