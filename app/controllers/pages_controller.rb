@@ -36,8 +36,8 @@ class PagesController < ApplicationController
   end
 
   def admin
-    @members = User.order(premium_until: 'DESC')
-    @members = User.all.filter do |member|
+
+    @members = User.all.order(premium_until: 'DESC').filter do |member|
       member.premium_until >= Time.now
     end
 

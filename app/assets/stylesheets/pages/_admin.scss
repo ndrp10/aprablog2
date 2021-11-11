@@ -9,7 +9,7 @@
 
   &__userbox {
     margin: 2vh auto;
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,8 +18,8 @@
     color: $color-primary;
     padding: 1vh 1vw;
 
-    h5 {font-size: 1.6rem;}
+    h5 {font-size: 1.4rem;}
 
-    p {font-size: 1.5rem; margin-top: 1vh;}
+    p {font-size: 1.3rem; margin-top: 1vh;}
   }
 }
