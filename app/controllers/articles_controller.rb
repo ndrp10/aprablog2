@@ -1,15 +1,15 @@
 class ArticlesController < ApplicationController
     before_action :set_article, only: [:show, :edit, :update, :destroy]
     skip_before_action :authenticate_user!, only: [:index, :show, :events]
-    
+
     def membersarea
         now = Date.today
         @user = User.find(current_user.id)
-        
+
         if current_user.premium_until >= now || current_user.admin
-            @articles = Article.where(private: "Yes").paginate(page: params[:page], per_page: 10).order(updated_at: :desc)    
+            @articles = Article.where(private: "Yes").paginate(page: params[:page], per_page: 10).order(updated_at: :desc)
         else
-            redirect_to blog_path, notice: "You need to subscribe to access our members area"   
+            redirect_to blog_path, notice: "You need to subscribe to access our members area"
         end
         one_week_ago = now - 7
         if current_user.premium_until <= one_week_ago && current_user.admin.nil?
@@ -19,13 +19,13 @@ class ArticlesController < ApplicationController
     end
 
     def events
-        @articles = Article.where(typetag: "Event", private: "No").paginate(page: params[:page], per_page: 10).order(updated_at: :desc) 
+        @articles = Article.where(typetag: "Event", private: "No").paginate(page: params[:page], per_page: 10).order(updated_at: :desc)
     end
 
 
     def new
         @article = Article.new
-        
+
         if current_user.admin == 'false'
             redirect_to root_path
         else
@@ -34,11 +34,11 @@ class ArticlesController < ApplicationController
     end
 
     def index
-        @articles = Article.where(typetag: "Article", private: "No").paginate(page: params[:page], per_page: 10)        
+        @articles = Article.where(typetag: "Article", private: "No").paginate(page: params[:page], per_page: 10)
     end
 
     def create
-        
+
             @article = Article.new(article_params)
 
             if @article.save
@@ -51,8 +51,8 @@ class ArticlesController < ApplicationController
 
 
     def show
-        @article = Article.find(params[:id])   
-       
+        @article = Article.find(params[:id])
+
             @word_count = WordsCounted.count(@article.rich_body.to_s)
             @words_per_m = 270
             @word_number = @word_count.token_count
@@ -62,7 +62,7 @@ class ArticlesController < ApplicationController
                 @read_time_rounded = @read_time + 1
             else
                 @read_time_rounded = @read_time
-            end 
+            end
     end
 
     def edit
@@ -72,12 +72,12 @@ class ArticlesController < ApplicationController
         else
             render 'edit'
         end
-        
+
     end
 
     def update
-        
-        if @article.update(article_params)    
+
+        if @article.update(article_params)
             flash[:notice] = "Article was updated succesfully."
             redirect_to @article
         else
@@ -87,12 +87,12 @@ class ArticlesController < ApplicationController
 
     end
 
-    def destroy 
+    def destroy
         @article.destroy
         redirect_to articles_path
     end
 
-private 
+private
 
     def set_article
         @article = Article.find(params[:id])
