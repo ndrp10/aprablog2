@@ -5,6 +5,11 @@
         <h5><%=user.name%></h5>
         <p><%=user.email%></p>
         <p><%= user.premium_until.strftime('%a, %m %B %Y') %></p>
+        <% if user.student %>
+         <p>Student</p>
+         <%else%>
+         <p>Not student</p>
+         <%end%>
     </div>
   <% end %>
 </div>
