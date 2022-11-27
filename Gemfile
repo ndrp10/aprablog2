@@ -45,7 +45,7 @@ gem 'cloudinary'
 gem 'readingtime'
 gem 'will_paginate', '~> 3.3.0'
 gem 'words_counted'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 5.2.2'
 gem 'gibbon'
 gem 'urls_for_humans'
 
