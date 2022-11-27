@@ -1,3 +1,4 @@
+
 Rails.application.routes.draw do
   root to: 'pages#home'
   get "/", to: "pages#home"
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
   get "/events", to: "articles#events"
   get "/admin", to: "pages#admin"
   get '/user' => "pages#home", :as => :user_root
+  get 'userslist' => 'users#index'
 
   devise_for :users
   resources :articles

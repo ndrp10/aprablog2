@@ -39,6 +39,7 @@ class PagesController < ApplicationController
 
     @members = User.all.order(premium_until: 'DESC').filter do |member|
       member.premium_until >= Time.now
+     
     end
 
      if current_user.admin == 'false'

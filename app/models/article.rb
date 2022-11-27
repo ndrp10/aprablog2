@@ -1,5 +1,6 @@
 class Article < ActiveRecord::Base
-    include UrlsForHumans   
+    include UrlsForHumans 
+    require 'csv'  
 
     validates :title, presence: true, length: { minimum: 6, maximum: 150}
     validates :subtitle, presence: true, length: { minimum: 6, maximum: 150}
@@ -14,6 +15,17 @@ class Article < ActiveRecord::Base
 
     TAGS = ["Article", "Event", "Newsletter"]
     ANSWERS = ["Yes", "No"]
-    validates :typetag, inclusion: {in: TAGS}   
+    validates :typetag, inclusion: {in: TAGS}  
+    
+    
+    def self.to_csv
+    users = all
+    CSV.generate do |csv|
+    csv << column_names
+    users.each do |post|
+        csv << post.attributes.values_at(*column_names)
+            end
+        end
+    end
 
 end

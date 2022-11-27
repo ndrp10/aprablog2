@@ -32,6 +32,16 @@ class User < ApplicationRecord
   def self.find_by_uid!(uid)
     User.find_by!("name = :p OR id = :p", p: uid)
   end
+  
+  def self.to_csv
+    users = all
+    CSV.generate do |csv|
+    csv << column_names
+    users.each do |post|
+        csv << post.attributes.values_at(*column_names)
+            end
+        end
+    end
 
 end
 
